@@ -1,5 +1,5 @@
 # naivphys4rp
-Perception as [inner realistic world construction](../belief_state) that anticipates and explains the world state as well as observations in an explainable manner, with reasonable computational resources.
+Perception as [inner realistic world construction](https://github.com/NaivPhys4RP/belief_state/) that anticipates and explains the world state as well as observations in an explainable manner, with reasonable computational resources.
 
 The principle is illustrated by the figure below:
 
