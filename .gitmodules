@@ -1,0 +1,9 @@
+[submodule "inverse_simulation"]
+	path = inverse_simulation
+	url = https://github.com/NaivPhys4RP/inverse_simulation.git
+[submodule "forward_simulation_rendering"]
+	path = forward_simulation_rendering
+	url = https://github.com/NaivPhys4RP/forward_simulation_rendering.git
+[submodule "belief_state"]
+	path = belief_state
+	url = https://github.com/NaivPhys4RP/belief_state.git
