@@ -1,0 +1,23 @@
+<package format="2">
+  <name>naivphys4rp</name>
+  <version>1.0.0</version>
+  <description>
+    This package provides physical reasoning capabilities to perception systems.
+  </description>
+  <maintainer email="fkenghag@uni-bremen.de">Franklin Kenghagho Kenfack</maintainer>
+  <license>BSD</license>
+
+  <url>https://ai.uni-bremen.de/team/franklin_kenghagho_kenfack</url>
+  <author>Franklin Kenghagho Kenfack</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roscpp</depend>
+  <depend>std_msgs</depend>
+
+  <build_depend>message_generation</build_depend>
+  <build_depend>inverse_simulation</build_depend>
+
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>rospy</exec_depend>
+</package>
