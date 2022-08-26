@@ -7,3 +7,6 @@
 [submodule "belief_state"]
 	path = belief_state
 	url = https://github.com/NaivPhys4RP/belief_state.git
+[submodule "naivphys4rp_msgs"]
+	path = naivphys4rp_msgs
+	url = https://github.com/NaivPhys4RP/naivphys4rp_msgs.git
