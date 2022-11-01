@@ -1,0 +1,48 @@
+<launch>
+  <!-- Analysis engines to execute, comma separated list: eninge1,engine2,... -->
+  
+  <arg name="ae"               default="demo"/> <!-- Short version for analysis_engines -->
+  <arg name="analysis_engines" default="$(arg ae)"/>
+  <!-- Enable / disable visualization -->
+  <arg name="vis"              default="false"/> <!-- Short version for visualization -->
+  <arg name="visualization"    default="$(arg vis)"/>
+  <!-- Path to where images and point clouds should be stored -->
+  <arg name="save_path"        default=""/>
+  <arg name="withIDRes"        default="false"/>
+  <arg name="wait"             default="false"/>
+  <arg name="port"             default="8081"/>
+  <arg name="initial_package" default="robosherlock" />
+  <arg name="parallel"         default="false"/>
+  <arg name="pervasive"        default="false"/>
+  <arg name="enableQnA"        default="false"/>
+  <!-- Machine on with the nodes should run. -->
+  <arg name="machine"          default="localhost"/>
+  <!-- Whether the machine for localhost should be defined our not. Disable this if the launch file is included somewhere where machines are already defined. -->
+  <arg name="define_machine"   default="true"/>
+  <arg name="debug"            default="false"/>
+  <arg name="launch-prefix"    value="gdb -ex run --args" if="$(arg debug)" />
+  <arg name="launch-prefix"    value="" unless="$(arg debug)" />
+  <param name="initial_package" type="string" value="$(arg initial_package)" />
+  <!-- Default machine definition. -->
+  <machine name="localhost" address="localhost" if="$(arg define_machine)"/>
+
+  <!-- launch robosherlock with the pipeline defined in demo.xml-->
+  <node name="RoboSherlock" pkg="robosherlock"  machine="$(arg machine)" type="run" output="screen"
+        launch-prefix="$(arg launch-prefix)">
+    <param name="ae"               type="str"  value="$(arg ae)"/>
+    <param name="vis"              type="bool" value="$(arg vis)"/>
+    <param name="parallel"         type="bool" value="$(arg parallel)"/>
+    <param name="save_path"        type="str"  value="$(arg save_path)"/>
+    <param name="withIDRes"        type="bool" value="$(arg withIDRes)"/>
+    <param name="wait"             type="bool" value="$(arg wait)"/>
+    <param name="pervasive"        type="bool" value="$(arg pervasive)"/>
+    <param name="enableQnA"        type="bool" value="$(arg enableQnA)"/>
+  </node>
+
+  <node name="rs_visualizer" pkg="web_video_server" type="web_video_server" output="screen" respawn="true">
+   <param name="port"               type="int"  value="$(arg port)"/>
+  </node> 
+  
+  <node name="json_prolog" pkg="json_prolog" type="json_prolog_node" cwd="node" output="screen"/>
+
+</launch>

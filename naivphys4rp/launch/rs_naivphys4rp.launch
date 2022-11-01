@@ -1,0 +1,36 @@
+<launch>
+  <!-- Analysis engines to execute, comma separated list: eninge1,engine2,... -->
+  
+  <arg name="ae"               default="ease_fs_demo"/> <!-- Short version for analysis_engines -->
+  <arg name="analysis_engines" default="$(arg ae)"/>
+  <!-- Enable / disable visualization -->
+  <arg name="vis"              default="false"/> <!-- Short version for visualization -->
+  <arg name="visualization"    default="$(arg vis)"/>
+  <!-- Path to where images and point clouds should be stored -->
+  <arg name="save_path"        default=""/>
+  <arg name="withIDRes"        default="false"/>
+  <arg name="wait"             default="false"/>
+  <arg name="port"             default="8081"/>
+  <arg name="parallel"         default="false"/>
+  <arg name="pervasive"        default="false"/>
+  <arg name="enableQnA"        default="false"/>
+  <arg name="ke"               default="SWI_PROLOG"/>
+
+  <!-- launch robosherlock with the pipeline defined in demo.xml-->
+  <node name="RoboSherlock" pkg="robosherlock"   type="run" output="screen">
+    <param name="ae"               type="str"  value="$(arg ae)"/>
+    <param name="vis"              type="bool" value="$(arg vis)"/>
+    <param name="parallel"         type="bool" value="$(arg parallel)"/>
+    <param name="save_path"        type="str"  value="$(arg save_path)"/>
+    <param name="withIDRes"        type="bool" value="$(arg withIDRes)"/>
+    <param name="wait"             type="bool" value="$(arg wait)"/>
+    <param name="pervasive"        type="bool" value="$(arg pervasive)"/>
+    <param name="enableQnA"        type="bool" value="$(arg enableQnA)"/>
+    <param name="ke"               type="str"  value="$(arg ke)"/>
+  </node>
+
+   <node name="rs_visualizer" pkg="web_video_server" type="web_video_server" output="screen" respawn="true">
+   <param name="port"               type="int"  value="$(arg port)"/>
+  </node> 
+  
+</launch>
