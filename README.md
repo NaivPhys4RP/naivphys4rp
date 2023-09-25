@@ -25,20 +25,20 @@ For more details on the distribution of packages in this architecture is as foll
 
 The scientific publications related to this work are:
 
-*IROS October 2020 [Presented - First Author]*
+1. *IROS October 2020 [Presented - First Author]:*
 **RobotVQA -A Scene-Graph-and Deep-Learning-based Visual Question Answering System for Robot Manipulation**
 
-ICRA May 2021 [Presented - Third Author]
-The Robot Household Marathon Experiment
+2. *ICRA May 2021 [Presented - Third Author]:*
+**The Robot Household Marathon Experiment**
 
-IROS October 2021 [Presented - Second Author]
-Imagination-enabled Robot Perception
+3. *IROS October 2021 [Presented - Second Author]:*
+**Imagination-enabled Robot Perception**
 
-Humanoids November 2022 [Presented - First Author]
-NaivPhys4RP -Towards Human-like Robot Perception: "Physical Reasoning based on Embodied Probabilistic Simulation"
+4. *Humanoids November 2022 [Presented - First Author]:*
+**NaivPhys4RP -Towards Human-like Robot Perception: "Physical Reasoning based on Embodied Probabilistic Simulation"**
 
-KR September 2023 [Presented - Second Author]
-Knowledge-Driven Robot Program Synthesis from Human VR Demonstrations
+5. *KR September 2023 [Presented - Second Author]:*
+**Knowledge-Driven Robot Program Synthesis from Human VR Demonstrations**
 
-ICRA September 2023 [upcoming submission - First Author] 
-Perception through Cognitive Emulation: “A Second Iteration of NaivPhys4RP for Learningless and Safe Recognition and 6D-Pose Estimation of (Transparent) Objects from Poor Sensor Data”
+6. *ICRA September 2023 [Submitted - First Author]:* 
+**Perception through Cognitive Emulation: “A Second Iteration of NaivPhys4RP for Learningless and Safe Recognition and 6D-Pose Estimation of (Transparent) Objects from Poor Sensor Data”**
