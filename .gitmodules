@@ -13,3 +13,6 @@
 [submodule "knowrob"]
 	path = knowrob
 	url = https://github.com/NaivPhys4RP/knowrob.git
+[submodule "UParaSim"]
+	path = UParaSim
+	url = https://github.com/NaivPhys4RP/UParaSim.git
