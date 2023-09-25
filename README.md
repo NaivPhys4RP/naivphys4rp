@@ -5,7 +5,7 @@ The principle is illustrated by the figure below:
 
 
 <p align=center>
-<img src="resources/NaivPhys4RP1.png"></img>
+<img src="resources/Architecture_V2.png"></img>
 </p>
 
 NaivPhys4RP is the designed perception system architecture that realizes this principle:
