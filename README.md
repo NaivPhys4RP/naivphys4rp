@@ -26,7 +26,7 @@ For more details on the distribution of packages in this architecture is as foll
 The scientific publications related to this work are:
 
 1. *IROS October 2020 [Presented - First Author]:*
-**RobotVQA -A Scene-Graph-and Deep-Learning-based Visual Question Answering System for Robot Manipulation**
+**[RobotVQA -A Scene-Graph-and Deep-Learning-based Visual Question Answering System for Robot Manipulation](https://ieeexplore.ieee.org/document/9341186)**
 
 2. *ICRA May 2021 [Presented - Third Author]:*
 **The Robot Household Marathon Experiment**
