@@ -16,3 +16,9 @@
 [submodule "UParaSim"]
 	path = UParaSim
 	url = https://github.com/NaivPhys4RP/UParaSim.git
+[submodule "RobotVQA"]
+	path = RobotVQA
+	url = https://github.com/NaivPhys4RP/RobotVQA.git
+[submodule "unreal_ros_pkgs"]
+	path = unreal_ros_pkgs
+	url = https://github.com/NaivPhys4RP/unreal_ros_pkgs.git
