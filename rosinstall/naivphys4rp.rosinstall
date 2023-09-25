@@ -1,5 +1,0 @@
-- git: {local-name: unreal_ros_pkgs, uri: 'https://github.com/robcog-iai/unreal_ros_pkgs.git', version: naivphys4rp }
-- git: {local-name: URoboVision, uri: 'https://github.com/robcog-iai/URoboVision.git', version: naivphys4rp }
-- git: {local-name: iai_common_msgs, uri: 'https://github.com/code-iai/iai_common_msgs.git', version: naivphys4rp}
-- git: {local-name: knowrob, uri: 'https://github.com/knowrob/knowrob.git', version: naivphys4rp}
-- git: {local-name: unreal_vision_bridge, uri: 'https://github.com/code-iai/unreal_vision_bridge.git', version: naivphys4rp}
