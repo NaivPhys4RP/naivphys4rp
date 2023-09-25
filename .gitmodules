@@ -22,3 +22,6 @@
 [submodule "unreal_ros_pkgs"]
 	path = unreal_ros_pkgs
 	url = https://github.com/NaivPhys4RP/unreal_ros_pkgs.git
+[submodule "unreal_vision_bridge"]
+	path = unreal_vision_bridge
+	url = https://github.com/NaivPhys4RP/unreal_vision_bridge.git
