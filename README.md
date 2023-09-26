@@ -20,7 +20,7 @@ For more details on the distribution of packages (in black background and white 
 
 
 <p align=center>
-<img src="resources/Architecture_V4.png"></img>
+<img src="resources/Architecture_V6.png"></img>
 </p>
 
 The scientific publications related to this work are:
