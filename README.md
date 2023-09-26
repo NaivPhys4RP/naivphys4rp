@@ -16,11 +16,11 @@ NaivPhys4RP is the designed perception system architecture that realizes this pr
 </p>
 
 
-For more details on the distribution of packages in this architecture is as follows:
+For more details on the distribution of packages (in black background and white foreground) in this architecture is as follows:
 
 
 <p align=center>
-<img src="resources/Architecture_V3.png"></img>
+<img src="resources/Architecture_V4.png"></img>
 </p>
 
 The scientific publications related to this work are:
