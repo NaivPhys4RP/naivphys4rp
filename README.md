@@ -12,7 +12,7 @@ NaivPhys4RP is the designed perception system architecture that realizes this pr
 
 
 <p align=center>
-<img src="resources/Architecture_V3.png"></img>
+<img src="resources/Architecture_V5.png"></img>
 </p>
 
 
