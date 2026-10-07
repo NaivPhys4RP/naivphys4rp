@@ -1,0 +1,28 @@
+The milk is on the table.
+The milk is in the table.
+The milk is on the table. The bottle is on the table.
+The milk is on the table. The milk is in the bottle.
+The milk is on the table. The milk is in the fridge.
+The milk is in the fridge. The bowl is on the table.
+The white milk is in the fridge.
+The robot makes milk. The  bowl is  on the table. The spoon is in the bowl. The milk  is in the fridge.
+The milk is on the table. The milk is in the blue bowl. The table is in the kitchen.
+The robot makes breakfast. The machine looks at the red bowl.
+The robot observes the milk.  The bottle is on the table.
+The bowl is on the table and the milk is in the bottle.
+The bottle is left to the mug.
+The bottle is left to the spoon. The spoon is in the bowl.
+the bowl is on the table and the spoon is in the bowl. The milk is in the bottle and the bottle is in the fridge. The robot is in the kitchen. The milk is behind the spoon.
+The milk is in the bottle and the spoon is right to the milk. The robot observes the fridge and the robot is in the kitchen
+
+The red bowl is on the table. The spoon is in the bowl. The red plastic mug is right  to the  bowl. The milk is in the bottle and the bottle is behind the bowl. The muesli is right to the bowl and the muesli is in the green box. The robot looks at the red bowl and the table is in the kitchen.
+
+
+The spoon is in the kitchen. The milk is in the fridge. The robot  looks at the milk.
+
+
+
+'Tree': [['Milk_0', 'is_in_4', 'Bottle_3'], ['Bottle_3', 'is_in_5', 'Fridge_2'], ['Fridge_2', 'is_in_7', 'Kitchen_6'], ['Milk_0', 'has_material_9', 'Liquid_8'], ['Bottle_3', 'has_material_11', 'Steel_10'], ['Bottle_3', 'has_material_13', 'Glassy_12'], ['Bottle_3', 'has_material_15', 'Solid_14'], ['Fridge_2', 'has_material_17', 'Steel_16'], ['Fridge_2', 'has_material_19', 'Woody_18'], ['Kitchen_6', 'has_material_21', 'Solid_20'], ['Kitchen_6', 'has_material_23', 'Ceramic_22'], ['Kitchen_6', 'has_material_25', 'Plastic_24'], ['Milk_0', 'has_color_27', 'White_26'], ['Bottle_3', 'has_color_29', 'Blue_28'], ['Bottle_3', 'has_color_31', 'White_30'], ['Fridge_2', 'has_color_33', 'Black_32'], ['Fridge_2', 'has_color_35', 'White_34'], ['Kitchen_6', 'has_color_37', 'Orange_36'], ['Milk_0', 'has_mass_39', '0.0662595486486426_38kg'], ['Bottle_3', 'has_mass_41', '0.0066000813239286745_40kg'], ['Fridge_2', 'has_mass_43', '400.0_42kg'], ['Kitchen_6', 'has_mass_45', '0.8803644221393141_44kg']]
+
+
+[['Robot_0', 'can_be_agent_7', 'Make_1'], ['Breakfast_2', 'can_be_ingredient_8', 'Make_1'], ['Breakfast_2', 'includes_4', 'Milk_4'], ['Breakfast_2', 'includes_6', 'Muesli_6'], ['Kitchen_10', 'can_accommodate_9', 'Make_1'], ['Island_12', 'can_be_support_11', 'Make_1'], ['Muesli_6', 'can_be_ingredient_13', 'Make_1'], ['Milk_4', 'can_be_ingredient_15', 'Make_1'], ['Cup_18', 'can_be_tool_17', 'Make_1'], ['Robot_0', 'is_in_19', 'Kitchen_10'], ['Breakfast_2', 'is_in_20', 'Cup_18'], ['Milk_4', 'is_in_21', 'Cup_18'], ['Muesli_6', 'is_in_22', 'Cup_18'], ['Island_12', 'is_in_23', 'Kitchen_10'], ['Cup_18', 'is_on_24', 'Island_12'], ['Robot_0', 'is_infront_25', 'Island_12'], ['Island_12', 'is_left_26', 'Robot_0'], ['Milk_4', 'is_infront_27', 'Breakfast_2'], ['Breakfast_2', 'is_left_27', 'Milk_4'], ['Muesli_6', 'is_infront_27', 'Breakfast_2'], ['Muesli_6', 'is_left_27', 'Breakfast_2'], ['Milk_4', 'is_infront_27', 'Muesli_6'], ['Milk_4', 'is_left_27', 'Muesli_6'], ['Robot_0', 'is_far_27:3%', 'Island_12'], ['Milk_4', 'is_near_28:44%', 'Breakfast_2'], ['Milk_4', 'is_near_29:6%', 'Muesli_6'], ['Muesli_6', 'is_far_30:60%', 'Breakfast_2'], ['Robot_0', 'has_material_32', 'Plastic_31'], ['Robot_0', 'has_material_34', 'Steel_33'], ['Breakfast_2', 'has_material_36', 'Glassy_35'], ['Milk_4', 'has_material_38', 'Liquid_37'], ['Muesli_6', 'has_material_40', 'Powdered_39'], ['Kitchen_10', 'has_material_42', 'Ceramic_41'], ['Kitchen_10', 'has_material_44', 'Gaseous_43'], ['Kitchen_10', 'has_material_46', 'Solid_45'], ['Kitchen_10', 'has_material_48', 'Steel_47'], ['Island_12', 'has_material_50', 'Woody_49'], ['Cup_18', 'has_material_52', 'Plastic_51'], ['Robot_0', 'has_color_54', 'Green_53'], ['Robot_0', 'has_color_56', 'Orange_55'], ['Breakfast_2', 'has_color_58', 'Brown_57'], ['Breakfast_2', 'has_color_60', 'Gray_59'], ['Milk_4', 'has_color_62', 'White_61'], ['Muesli_6', 'has_color_64', 'Brown_63'], ['Kitchen_10', 'has_color_66', 'Violet_65'], ['Kitchen_10', 'has_color_68', 'Gray_67'], ['Kitchen_10', 'has_color_70', 'Red_69'], ['Island_12', 'has_color_72', 'Black_71'], ['Island_12', 'has_color_74', 'Brown_73'], ['Cup_18', 'has_color_76', 'Red_75'], ['Robot_0', 'has_mass_78', '150.0_77kg'], ['Breakfast_2', 'has_mass_80', '0.5004879102605868_79kg'], ['Milk_4', 'has_mass_82', '0.41004702965947787_81kg'], ['Muesli_6', 'has_mass_84', '0.455593994675661_83kg'], ['Kitchen_10', 'has_mass_86', '0.3563768939204844_85kg'], ['Island_12', 'has_mass_88', '149.47414992239615_87kg'], ['Cup_18', 'has_mass_90', '0.02_89kg']]
