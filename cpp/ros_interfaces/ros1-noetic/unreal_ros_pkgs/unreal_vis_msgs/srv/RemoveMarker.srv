@@ -1,0 +1,5 @@
+# id of marker, that shall be removed
+string marker_id
+---
+# true if marker was found and removed
+bool success

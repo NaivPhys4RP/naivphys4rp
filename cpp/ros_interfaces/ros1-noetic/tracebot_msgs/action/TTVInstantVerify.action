@@ -1,0 +1,27 @@
+# Action definition for instant verification
+# Takes in VerificationType and returns a boolean
+# True means success, False means failure
+# duration is how long the verification took in seconds
+# feedback is used to send intermediate results during the verification
+# This allows the client to monitor progress
+# and preempt the action if necessary
+
+# Imports
+# Uncomment these lines if not already present in your file
+# from verification.msg import TTVTaskTypeConsts
+# from actionlib_msgs.msg import GoalStatus
+
+# Definition
+# Goal
+uint8 verification_type
+---
+# Result
+bool decision
+float32 confidence_level
+string explanation
+string nonverbal_explanation
+float32 duration
+uint8 status
+---
+# Feedback
+string status

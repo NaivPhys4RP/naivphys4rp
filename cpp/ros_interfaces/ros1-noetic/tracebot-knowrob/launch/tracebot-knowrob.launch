@@ -1,0 +1,17 @@
+<launch>  
+   <arg name="with_kb_reset"   default="true"/>
+   <arg name="with_clean_up_neem_experience"   default="true"/>
+   <arg name="with_neem_experience"   default="false"/>
+   <arg name="with_online_verification"   default="false"/>
+   <arg name="neem_path"   default="~/.ros/tracebot_neems"/>
+   <param name="with_neem_experience"              type="bool" value="$(arg with_neem_experience)"/>
+   <param name="with_online_verification"              type="bool" value="$(arg with_online_verification)"/>
+   <param name="with_kb_reset"              type="bool" value="$(arg with_kb_reset)"/>
+   <param name="with_kb_reset"              type="bool" value="$(arg with_kb_reset)"/>
+   <param name="with_clean_up_neem_experience"              type="bool" value="$(arg with_clean_up_neem_experience)"/>
+   <param name="neem_path"              type="str" value="$(arg neem_path)"/>
+  <include file="$(find knowrob)/launch/knowrob.launch">
+  </include>
+  <node name="tracebot_knowrob_node" pkg="tracebot-knowrob" type="tracebot_knowrob_proxy.py" output="screen">
+  </node> 
+</launch>

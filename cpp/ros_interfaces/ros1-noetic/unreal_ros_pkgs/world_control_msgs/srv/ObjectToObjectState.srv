@@ -1,0 +1,5 @@
+string source_object_id
+string other_object_id
+---
+string state
+bool success

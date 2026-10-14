@@ -1,0 +1,12 @@
+#match visual state of object in real world and one in DT
+
+string id					#id of target object
+string camera_id				#id of camera
+sensor_msgs/Image color_image			#real color image
+sensor_msgs/Image depth_image			#real depth image
+sensor_msgs/CameraInfo camera_info		#camera info
+DTVisualMatchAnswer match_type			#match type, classname or pose?
+---
+float32 match_score				#match score
+---
+string feedback

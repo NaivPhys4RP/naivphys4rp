@@ -1,0 +1,17 @@
+verifier:
+  name: KBCanisterInsertionSuccess
+  description: Check the success of inserting the canister into the drain tray
+  mode: Success
+domains:
+  - Pushing:
+      objects:
+        Actor:
+          - LeftRobotGripper@CEA
+          - RightRobotGripper@CEA
+          - LeftRobotGripper@Robotiq
+          - RightRobotGripper@Robotiq
+        Patient:
+          - Canister
+        Destination:
+          - DrainTray
+      modalities: [DT-Based]

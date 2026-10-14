@@ -1,0 +1,9 @@
+# this action retrieves the image of a concept wrt an object property from the ontology
+
+string class_name		# target concept/class
+string property_name		# object property
+string quantifier              # "only", "some", "max n", "min n", "exactly n", where n is a natural number
+---
+string[] classes		# list of images of property_name(class_name)
+---
+bool feedback 

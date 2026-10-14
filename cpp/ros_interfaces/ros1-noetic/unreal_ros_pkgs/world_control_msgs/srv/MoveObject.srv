@@ -1,0 +1,6 @@
+# This service is used to set the model described by the id to the set pose.
+string Name
+geometry_msgs/Pose pose
+---
+# true if model was set to pose successfully.
+bool success

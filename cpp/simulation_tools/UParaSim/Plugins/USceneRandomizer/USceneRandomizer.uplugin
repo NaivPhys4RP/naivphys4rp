@@ -1,0 +1,26 @@
+
+
+
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "USceneRandomizer",
+	"Description": "Randomization of object configuration in the scene.",
+	"Category": "NaivPhys4RP",
+	"CreatedBy": "Kenghagho Kenfack",
+	"CreatedByURL": "https://github.com/naivphys4rp",
+	"DocsURL": "https://github.com/naivphys4rp",
+	"MarketplaceURL": "",
+	"SupportURL": "https://github.com/naivphys4rp",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "USceneRandomizer",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}

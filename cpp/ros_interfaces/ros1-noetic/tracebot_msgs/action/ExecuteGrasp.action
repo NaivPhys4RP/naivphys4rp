@@ -1,0 +1,5 @@
+CloseType close_grasp_type          # closing the fingers according to the type of control
+---
+bool close_grasp_status             # Grasp closing successfully completed or not
+---
+string feedback

@@ -1,0 +1,7 @@
+# this action emulates a TB process
+string scenario_name		# the scenario name (e.g., insert canister into drain tray)
+string path_name		# the path to a subsymbolic mongo database
+---
+bool   status			# whether the scenario has been successfully emulated
+---
+bool feedback

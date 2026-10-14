@@ -1,0 +1,7 @@
+#Common sense knowledge of location
+
+string query		#e.g.,serialized json query. location(red-plug,plastic-bag) ; in(red-plug,plastic-bag); on(canister,table)
+---
+string[] results	#array of string-serialized answer dictionary
+---
+bool feedback

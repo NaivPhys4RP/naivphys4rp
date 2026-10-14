@@ -1,0 +1,218 @@
+Sensing:  # primitive actions
+  roles:  # list roles of participants in primitive actions. Note that some roles might appear several times (e.g., sensor fusion for perception)
+    - Sensor
+  verification:  # distribution of capabilities (sum up to 1. prior in bayesian terminology) over verification modalitites for primitive actions
+    KB-Based: 0.0
+    DT-Based: 0.2
+    Tactile-Based: 0.3
+    Odometry-Based: 0.0
+    Visual-Based: 0.5
+    Acoustic-Based: 0.0
+Detecting:
+  roles:
+    - Sensor
+    - Stimulus
+  verification:
+    KB-Based: 0.0
+    DT-Based: 0.35
+    Tactile-Based: 0.20
+    Odometry-Based: 0.0
+    Visual-Based: 0.45
+    Acoustic-Based: 0.0
+Recognizing:
+  roles:
+    - Sensor
+    - Stimulus
+  verification:
+    KB-Based: 0.0
+    DT-Based: 0.35
+    Tactile-Based: 0.20
+    Odometry-Based: 0.0
+    Visual-Based: 0.45
+    Acoustic-Based: 0.0
+PoseEstimating:
+  roles:
+    - Sensor
+    - Patient
+  verification:
+    KB-Based: 0.0
+    DT-Based: 0.35
+    Tactile-Based: 0.20
+    Odometry-Based: 0.0
+    Visual-Based: 0.45
+    Acoustic-Based: 0.0
+Grasping:
+  roles:
+    - Actor
+    - Patient
+  verification:
+    KB-Based: 0.0
+    DT-Based: 0.35
+    Tactile-Based: 0.20
+    Odometry-Based: 0.45
+    Visual-Based: 0.0
+    Acoustic-Based: 0.0
+Transporting:
+  roles:
+    - Actor
+    - Patient
+    - Source
+    - Destination
+  verification:
+    KB-Based: 0.0
+    DT-Based: 0.35
+    Tactile-Based: 0.20
+    Odometry-Based: 0.0
+    Visual-Based: 0.45
+    Acoustic-Based: 0.0
+Reaching:
+  roles:
+    - Actor
+    - Destination
+  verification:
+    KB-Based: 0.0
+    DT-Based: 0.35
+    Tactile-Based: 0.20
+    Odometry-Based: 0.0
+    Visual-Based: 0.45
+    Acoustic-Based: 0.0
+Placing:
+  roles:
+    - Actor
+    - Patient
+    - Destination
+  verification:
+    KB-Based: 0.0
+    DT-Based: 0.35
+    Tactile-Based: 0.20
+    Odometry-Based: 0.0
+    Visual-Based: 0.45
+    Acoustic-Based: 0.0
+Orienting:
+  roles:
+    - Actor
+    - Patient
+    - Destination
+  verification:
+    KB-Based: 0.0
+    DT-Based: 0.35
+    Tactile-Based: 0.20
+    Odometry-Based: 0.0
+    Visual-Based: 0.45
+    Acoustic-Based: 0.0
+Pulling:
+  roles:
+    - Actor
+    - Patient
+    - Destination
+  verification:
+    KB-Based: 0.0
+    DT-Based: 0.35
+    Tactile-Based: 0.20
+    Odometry-Based: 0.0
+    Visual-Based: 0.45
+    Acoustic-Based: 0.0
+Retracting:
+  roles:
+    - Actor
+    - Destination
+  verification:
+    KB-Based: 0.0
+    DT-Based: 0.35
+    Tactile-Based: 0.20
+    Odometry-Based: 0.0
+    Visual-Based: 0.45
+    Acoustic-Based: 0.0
+Parking:
+  roles:
+    - Actor
+    - Destination
+  verification:
+    KB-Based: 0.0
+    DT-Based: 0.35
+    Tactile-Based: 0.20
+    Odometry-Based: 0.0
+    Visual-Based: 0.45
+    Acoustic-Based: 0.0
+Inserting:
+  roles:
+    - Actor
+    - Patient
+    - Destination
+  verification:
+    KB-Based: 0.0
+    DT-Based: 0.35
+    Tactile-Based: 0.20
+    Odometry-Based: 0.0
+    Visual-Based: 0.45
+    Acoustic-Based: 0.0
+Lifting:
+  roles:
+    - Actor
+    - Patient
+    - Destination
+  verification:
+    KB-Based: 0.0
+    DT-Based: 0.35
+    Tactile-Based: 0.20
+    Odometry-Based: 0.0
+    Visual-Based: 0.45
+    Acoustic-Based: 0.0
+Delivering:
+  roles:
+    - Actor
+    - Patient
+    - Destination
+  verification:
+    KB-Based: 0.0
+    DT-Based: 0.35
+    Tactile-Based: 0.20
+    Odometry-Based: 0.0
+    Visual-Based: 0.45
+    Acoustic-Based: 0.0
+Pushing:
+  roles:
+    - Actor
+    - Patient
+    - Destination
+  verification:
+    KB-Based: 0.0
+    DT-Based: 0.35
+    Tactile-Based: 0.20
+    Odometry-Based: 0.0
+    Visual-Based: 0.45
+    Acoustic-Based: 0.0
+Containing:
+  roles:
+    - Container
+    - Patient
+  verification:
+    KB-Based: 0.0
+    DT-Based: 0.35
+    Tactile-Based: 0.20
+    Odometry-Based: 0.0
+    Visual-Based: 0.45
+    Acoustic-Based: 0.0
+Supporting:
+  roles:
+    - Support
+    - Patient
+  verification:
+    KB-Based: 0.0
+    DT-Based: 0.35
+    Tactile-Based: 0.20
+    Odometry-Based: 0.0
+    Visual-Based: 0.45
+    Acoustic-Based: 0.0
+Planning:
+  roles:
+    - Source
+    - Parameter
+    - Destination
+  verification:
+    KB-Based: 1.0
+    DT-Based: 0.0
+    Tactile-Based: 0.0
+    Odometry-Based: 0.0
+    Visual-Based: 0.0
+    Acoustic-Based: 0.0

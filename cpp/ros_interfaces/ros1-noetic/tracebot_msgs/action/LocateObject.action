@@ -1,0 +1,13 @@
+string object_to_locate  # optional , if unspecified, returns everything found
+string gripper  # optional , if left or right specified, focus on the corresponding gripper
+---
+std_msgs/Header header
+geometry_msgs/Pose[] object_poses
+sensor_msgs/RegionOfInterest[] bounding_boxes # A list of bounding boxes for all detected objects. Is not guaranteed to be filled
+string[] object_types
+float32[] confidences
+sensor_msgs/Image color_image  # real color image used for the prediction
+sensor_msgs/Image depth_image  # real depth image used for the prediction
+sensor_msgs/CameraInfo camera_info
+---
+string placeholder_feedback

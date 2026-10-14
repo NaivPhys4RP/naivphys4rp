@@ -1,0 +1,743 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/franklin/ontologies/2022/7/naivphys4rp"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/franklin/ontologies/2022/7/naivphys4rp">
+    <Prefix name="" IRI="http://www.semanticweb.org/franklin/ontologies/2022/7/naivphys4rp#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Action"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Attribute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bottle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bowl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Box"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Breakfasting"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Container"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cornflakes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CornflakesPreparing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GraspableObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ingredient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Island"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Knife"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Milk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MilkPreparing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Muesli"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MuesliPreparing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mug"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ObjectCommonPose"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ObjectGraspPose"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Plate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pose"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sink"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Spoon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sugar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Support"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Table"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Water"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_pose"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#involves"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#supports"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_color"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_material"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_mesh"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_rot_w"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_rot_x"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_rot_y"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_rot_z"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_shape"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_trans_x"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_trans_y"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_trans_z"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.semanticweb.org/smile/ontologies/2022/2/TraceBot#has_mesh"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#GraspableObject"/>
+        <ObjectUnionOf>
+            <Class IRI="#Container"/>
+            <Class IRI="#Tool"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Bottle"/>
+        <Class IRI="#Container"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bottle"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#contains"/>
+            <Class IRI="#Milk"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bottle"/>
+        <DataHasValue>
+            <DataProperty IRI="#has_color"/>
+            <Literal>Blue</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bottle"/>
+        <DataHasValue>
+            <DataProperty IRI="#has_material"/>
+            <Literal>Plastic</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bottle"/>
+        <DataHasValue>
+            <DataProperty IRI="#has_shape"/>
+            <Literal>Cylindrical</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bottle"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/smile/ontologies/2022/2/TraceBot#has_mesh"/>
+            <Literal>BluePlasticBottle</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bowl"/>
+        <Class IRI="#Container"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bowl"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#contains"/>
+            <ObjectUnionOf>
+                <Class IRI="#Container"/>
+                <Class IRI="#Ingredient"/>
+                <Class IRI="#Tool"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bowl"/>
+        <DataHasValue>
+            <DataProperty IRI="#has_color"/>
+            <Literal>Red</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bowl"/>
+        <DataHasValue>
+            <DataProperty IRI="#has_material"/>
+            <Literal>Plastic</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bowl"/>
+        <DataHasValue>
+            <DataProperty IRI="#has_shape"/>
+            <Literal>Conical</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bowl"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/smile/ontologies/2022/2/TraceBot#has_mesh"/>
+            <Literal>RedPlasticBowl</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Box"/>
+        <Class IRI="#Container"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Box"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#contains"/>
+            <Class IRI="#Muesli"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Box"/>
+        <DataHasValue>
+            <DataProperty IRI="#has_color"/>
+            <Literal>Green</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Box"/>
+        <DataHasValue>
+            <DataProperty IRI="#has_material"/>
+            <Literal>Cartoon</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Box"/>
+        <DataHasValue>
+            <DataProperty IRI="#has_shape"/>
+            <Literal>Cubic</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Box"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/smile/ontologies/2022/2/TraceBot#has_mesh"/>
+            <Literal>GreenCartoonBox</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Breakfasting"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Container"/>
+        <Class IRI="#Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Container"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#contains"/>
+            <ObjectUnionOf>
+                <Class IRI="#Container"/>
+                <Class IRI="#Ingredient"/>
+                <Class IRI="#Tool"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cornflakes"/>
+        <Class IRI="#Ingredient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CornflakesPreparing"/>
+        <Class IRI="#Breakfasting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GraspableObject"/>
+        <Class IRI="#Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GraspableObject"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_pose"/>
+            <Class IRI="#ObjectGraspPose"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ingredient"/>
+        <Class IRI="#Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Island"/>
+        <Class IRI="#Support"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Knife"/>
+        <Class IRI="#Tool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Milk"/>
+        <Class IRI="#Ingredient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MilkPreparing"/>
+        <Class IRI="#Breakfasting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MilkPreparing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involves"/>
+            <Class IRI="#Bowl"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MilkPreparing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involves"/>
+            <Class IRI="#Milk"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MilkPreparing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involves"/>
+            <Class IRI="#Mug"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MilkPreparing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involves"/>
+            <Class IRI="#Spoon"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MilkPreparing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involves"/>
+            <Class IRI="#Support"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Muesli"/>
+        <Class IRI="#Ingredient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MuesliPreparing"/>
+        <Class IRI="#Breakfasting"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MuesliPreparing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involves"/>
+            <Class IRI="#MilkPreparing"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MuesliPreparing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involves"/>
+            <Class IRI="#Muesli"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MuesliPreparing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#involves"/>
+            <Class IRI="#Support"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mug"/>
+        <Class IRI="#Container"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mug"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#contains"/>
+            <ObjectUnionOf>
+                <Class IRI="#Ingredient"/>
+                <Class IRI="#Mug"/>
+                <Class IRI="#Tool"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mug"/>
+        <DataHasValue>
+            <DataProperty IRI="#has_color"/>
+            <Literal>Red</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mug"/>
+        <DataHasValue>
+            <DataProperty IRI="#has_material"/>
+            <Literal>Plastic</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mug"/>
+        <DataHasValue>
+            <DataProperty IRI="#has_shape"/>
+            <Literal>Cylindrical</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mug"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/smile/ontologies/2022/2/TraceBot#has_mesh"/>
+            <Literal>RedPlasticMug</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Object"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_pose"/>
+            <Class IRI="#ObjectCommonPose"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ObjectCommonPose"/>
+        <Class IRI="#Pose"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ObjectGraspPose"/>
+        <Class IRI="#Pose"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plate"/>
+        <Class IRI="#Container"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#contains"/>
+            <ObjectUnionOf>
+                <Class IRI="#Container"/>
+                <Class IRI="#Ingredient"/>
+                <Class IRI="#Tool"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plate"/>
+        <DataHasValue>
+            <DataProperty IRI="#has_shape"/>
+            <Literal>Circular</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plate"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/smile/ontologies/2022/2/TraceBot#has_mesh"/>
+            <Literal>Plate</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pose"/>
+        <Class IRI="#Attribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sink"/>
+        <Class IRI="#Support"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spoon"/>
+        <Class IRI="#Tool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spoon"/>
+        <DataHasValue>
+            <DataProperty IRI="#has_color"/>
+            <Literal>Gray</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spoon"/>
+        <DataHasValue>
+            <DataProperty IRI="#has_material"/>
+            <Literal>Steel</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spoon"/>
+        <DataHasValue>
+            <DataProperty IRI="#has_shape"/>
+            <Literal>Filiform</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spoon"/>
+        <DataHasValue>
+            <DataProperty IRI="http://www.semanticweb.org/smile/ontologies/2022/2/TraceBot#has_mesh"/>
+            <Literal>GraySteelSpoon</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sugar"/>
+        <Class IRI="#Ingredient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Support"/>
+        <Class IRI="#Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Support"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#supports"/>
+            <ObjectUnionOf>
+                <Class IRI="#Container"/>
+                <Class IRI="#Tool"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Table"/>
+        <Class IRI="#Support"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Table"/>
+        <DataHasValue>
+            <DataProperty IRI="#has_color"/>
+            <Literal>Orange</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Table"/>
+        <DataHasValue>
+            <DataProperty IRI="#has_material"/>
+            <Literal>Wood</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Table"/>
+        <DataHasValue>
+            <DataProperty IRI="#has_shape"/>
+            <Literal>Rectangular</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tool"/>
+        <Class IRI="#Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Water"/>
+        <Class IRI="#Ingredient"/>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="#Container"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_pose"/>
+        <Class IRI="#Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#involves"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#supports"/>
+        <Class IRI="#Support"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contains"/>
+        <Class IRI="#Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_pose"/>
+        <Class IRI="#Pose"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#involves"/>
+        <ObjectUnionOf>
+            <Class IRI="#Action"/>
+            <Class IRI="#Object"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#supports"/>
+        <ObjectUnionOf>
+            <Class IRI="#Container"/>
+            <Class IRI="#Tool"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_color"/>
+        <Class IRI="#Object"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_material"/>
+        <Class IRI="#Object"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_mesh"/>
+        <Class IRI="#Object"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_rot_w"/>
+        <Class IRI="#Pose"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_rot_x"/>
+        <Class IRI="#Pose"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_rot_y"/>
+        <Class IRI="#Pose"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_rot_z"/>
+        <Class IRI="#Pose"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_shape"/>
+        <Class IRI="#Object"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_trans_x"/>
+        <Class IRI="#Pose"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_trans_y"/>
+        <Class IRI="#Pose"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_trans_z"/>
+        <Class IRI="#Pose"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_color"/>
+        <DataOneOf>
+            <Literal>Black</Literal>
+            <Literal>Blue</Literal>
+            <Literal>Brown</Literal>
+            <Literal>Gray</Literal>
+            <Literal>Green</Literal>
+            <Literal>Orange</Literal>
+            <Literal>Pink</Literal>
+            <Literal>Red</Literal>
+            <Literal>Violet</Literal>
+            <Literal>White</Literal>
+            <Literal>Yellow</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_material"/>
+        <DataOneOf>
+            <Literal>Cartoon</Literal>
+            <Literal>Ceramic</Literal>
+            <Literal>Gaz</Literal>
+            <Literal>Glass</Literal>
+            <Literal>Liquid</Literal>
+            <Literal>Plastic</Literal>
+            <Literal>Powder</Literal>
+            <Literal>Solid</Literal>
+            <Literal>Steel</Literal>
+            <Literal>Wood</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_mesh"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_rot_w"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_rot_x"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_rot_y"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_rot_z"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_shape"/>
+        <DataOneOf>
+            <Literal>Circular</Literal>
+            <Literal>Conical</Literal>
+            <Literal>Cubic</Literal>
+            <Literal>Cylindrical</Literal>
+            <Literal>Filiform</Literal>
+            <Literal>Rectangular</Literal>
+            <Literal>Triangular</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_trans_x"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_trans_y"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_trans_z"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

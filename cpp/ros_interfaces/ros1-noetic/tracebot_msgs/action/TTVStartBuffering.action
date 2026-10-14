@@ -1,0 +1,17 @@
+# Action definition for starting data buffering
+# Takes no arguments, returns no results
+# Sends feedback messages to the client to indicate progress
+
+# Imports
+# Uncomment this line if not already present in your file
+# from actionlib_msgs.msg import GoalStatus
+
+# Definition
+# Goal
+uint8 verification_type
+---
+# Result
+uint8 status
+---
+# Feedback
+float32 progress

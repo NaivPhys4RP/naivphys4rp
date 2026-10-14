@@ -1,0 +1,7 @@
+# this action retrieves the list of properties from the ontology
+
+			#no input
+---
+string[] properties	# list of images of property_name(class_name)
+---
+bool feedback 

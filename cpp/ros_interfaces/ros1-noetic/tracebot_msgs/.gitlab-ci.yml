@@ -1,0 +1,39 @@
+image: docker:git
+
+services:
+  - docker:dind
+
+before_script:
+  - apk add --update bash coreutils tar
+  - git clone --quiet --depth 1 -b master https://github.com/ros-industrial/industrial_ci.git .industrial_ci
+
+.industrial_ci:
+  variables:
+    TMPDIR: /builds/${CI_PROJECT_NAMESPACE}
+    ROS_REPO: main
+  script:
+    - .industrial_ci/gitlab.sh
+  tags:
+    - tracebot
+
+industrial_ci_melodic:
+  extends: .industrial_ci
+  variables:
+    ROS_DISTRO: melodic
+
+industrial_ci_noetic:
+  extends: .industrial_ci
+  variables:
+    ROS_DISTRO: noetic
+
+markdown_lint:
+  script:
+    - docker run -v ${PWD}:/ac cytopia/awesome-ci syntax-markdown --path=/ac --extension=md --ignore=.industrial_ci --custom="-r ~MD013"
+  tags:
+    - tracebot
+
+trailing_whitespace:
+  script:
+    - docker run -v ${PWD}:/ac cytopia/awesome-ci file-trailing-space --path=/ac --text --ignore=.industrial_ci,.git
+  tags:
+    - tracebot

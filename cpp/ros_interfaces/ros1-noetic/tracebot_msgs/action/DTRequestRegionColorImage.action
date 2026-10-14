@@ -1,0 +1,8 @@
+#request color image of a region from a specific camera
+
+string id				#id of target object
+string[] camera_id			#list of camera ids
+---
+sensor_msgs/Image[] images		#list of color images of target object from different cameras
+---
+string feedback

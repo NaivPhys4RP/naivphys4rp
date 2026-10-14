@@ -1,0 +1,6 @@
+# Start left gripper moves in order to align the needle inside the right gripper once it is grasped
+# No goal
+---
+bool needle_aligned
+---
+string feedback

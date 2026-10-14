@@ -1,0 +1,6 @@
+system:
+  environment: iai-kitchen.yaml
+  robot: pr2_robot
+    sensors:
+      camera: kinect2
+      

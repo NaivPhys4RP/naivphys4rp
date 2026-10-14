@@ -1,0 +1,18 @@
+# this action interface loads a specific ontology in the inference engine knowrob
+
+#goal
+
+string package		#The ros package in which the ontology is to be found
+string relative_path	#The relative path from the package folder root to the ontology file
+string namespace	#The namespace of the ontology
+-------------------
+
+#result
+
+bool status
+
+------------------------
+
+#feedback
+
+bool feedback

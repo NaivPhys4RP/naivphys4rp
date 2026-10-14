@@ -1,0 +1,6 @@
+#this action deletes everything from the knowledge base and also the game engine based simulation
+#no argument is required now
+---
+bool status
+---
+bool feedback

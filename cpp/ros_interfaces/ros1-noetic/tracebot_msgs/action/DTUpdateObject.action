@@ -1,0 +1,8 @@
+# updating existing object in DT
+
+string id				#id of target object
+geometry_msgs/PoseStamped pose		#new pose of object
+---
+bool success				#true if successfully updated, false otherwise
+---
+string feedback

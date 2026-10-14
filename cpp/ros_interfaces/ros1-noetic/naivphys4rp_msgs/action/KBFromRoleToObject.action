@@ -1,0 +1,8 @@
+# this action retrieves the objects with respect to a disposition from the ontology
+
+string class_name		# target concept/class
+string namespace		# namespace
+---
+string[] classes		# list of roles of the given class
+---
+bool feedback 

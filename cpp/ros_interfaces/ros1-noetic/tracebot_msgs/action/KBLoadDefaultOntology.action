@@ -1,0 +1,6 @@
+#this action loads default ontologies
+#no parameters
+---
+bool status    	#The status of the operation
+---
+bool feedback

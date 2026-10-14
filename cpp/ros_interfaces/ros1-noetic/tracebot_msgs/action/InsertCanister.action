@@ -1,0 +1,15 @@
+# Direction in which the object is to be inserted. Tipically the central axis of the hole
+geometry_msgs/Vector3Stamped insertion_direction
+# Target location of the inserted object. Tipically expressed in a static frame such as world (or camera)
+geometry_msgs/PoseStamped target_pose
+# Pose with which the object was grasped, i.e. pose of the gripper TCP with respect to the object frame
+geometry_msgs/PoseStamped grasp_pose
+---
+# Final positioning error after insertion is done
+geometry_msgs/Twist stationary_error
+---
+# Desired and actual position of the object at the current time
+geometry_msgs/PoseStamped desired_position
+geometry_msgs/PoseStamped actual_position
+# Error between the desired and actual position of the object at the current time
+geometry_msgs/Twist tracking_error

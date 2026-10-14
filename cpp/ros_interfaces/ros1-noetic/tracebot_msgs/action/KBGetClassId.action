@@ -1,0 +1,10 @@
+# this action interface returns the possible ids of a class. Ideally it should be one, but can be many due to aggregation of ontologies
+#goal
+string classname	#The name of the class
+bool exact		#True if the base name of the id should exactly be the given name. Do not care about case match
+-------------------
+#result
+string[] list_ids	#List of returned ids
+--------------------
+#feedback
+bool feedback

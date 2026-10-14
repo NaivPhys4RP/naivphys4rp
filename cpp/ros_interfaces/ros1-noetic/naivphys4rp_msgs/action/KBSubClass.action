@@ -1,0 +1,9 @@
+# this action retrieves the subclass or superclass of a concept from the ontology
+
+string class_name		# target concept/class
+string namespace		# namespace
+bool is_sub			# are we looking for subclasses?
+---
+string[] classes		# list of super or subclasses of the given class
+---
+bool feedback 

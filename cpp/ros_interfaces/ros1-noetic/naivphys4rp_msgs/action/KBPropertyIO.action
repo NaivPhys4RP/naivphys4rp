@@ -1,0 +1,13 @@
+# this action retrieves the domain and range of a property from the ontology
+
+string property_name		# target concept/property
+string namespace		# namespace
+string type_range		# type of range: extention or intention
+string type_domain		# type of domain: extention or intention
+---
+string[] erange			# range of the property
+string irange	
+string[] edomain		# domain of the property
+string idomain		
+---
+bool feedback 

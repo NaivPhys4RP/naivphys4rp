@@ -1,0 +1,9 @@
+# this action retrieves the subproperty or superproperty of a concept from the ontology
+
+string property_name		# target concept/property
+string namespace		# namespace
+bool is_sub			# are we looking for subpropertyes?
+---
+string[] propertyes		# list of super or subpropertyes of the given property
+---
+bool feedback 

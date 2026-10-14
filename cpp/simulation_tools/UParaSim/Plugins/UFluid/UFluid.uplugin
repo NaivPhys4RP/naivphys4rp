@@ -1,0 +1,23 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "UFluid",
+	"Description": "Simulator of Navier-Stockes Model of Fluids.",
+	"Category": "NaivPhys4RP",
+	"CreatedBy": "Kenghagho Kenfack",
+	"CreatedByURL": "https://github.com/naivphys4rp",
+	"DocsURL": "https://github.com/naivphys4rp",
+	"MarketplaceURL": "",
+	"SupportURL": "https://github.com/naivphys4rp",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "UFluid",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}

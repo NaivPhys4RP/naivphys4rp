@@ -1,0 +1,24 @@
+<package format="2">
+  <name>naivphys4rp_msgs</name>
+  <version>1.0.0</version>
+  <description>
+    This package provides interfaces to interact with NaivPhys4RP.
+  </description>
+  <maintainer email="fkenghag@uni-bremen.de">Franklin Kenghagho Kenfack</maintainer>
+  <license>BSD</license>
+
+  <url>https://ai.uni-bremen.de/team/franklin_kenghagho_kenfack</url>
+  <author>Franklin Kenghagho Kenfack</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roscpp</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>actionlib</depend>
+  <depend>actionlib_msgs</depend>
+  <depend>message_generation</depend>
+
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>rospy</exec_depend>
+</package>

@@ -1,0 +1,7 @@
+#Common sense knowledge of location
+
+DTQueryKnowledgeQuery query	#e.g.,serialized json query. location(red-plug,plastic-bag) ; in(red-plug,plastic-bag); on(canister,table)
+---
+DTQueryKnowledgeAnswer result	#serialized json answer
+---
+string feedback

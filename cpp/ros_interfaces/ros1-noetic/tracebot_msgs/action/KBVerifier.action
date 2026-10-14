@@ -1,0 +1,8 @@
+# this action implements a task verification
+string action_id		# id of the action to implement
+---
+bool   decision		# whether the verified task was completed successfully or not
+float64 confidence		# confidence of the decision
+string explanation		# verbal explanation of decision. e.g., actual and expected bboxes of canister do not match
+---
+bool feedback			# true if the verification completed successfully and false otherwise

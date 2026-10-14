@@ -1,0 +1,9 @@
+# this action retrieves the participants as roles of an action from the ontology
+
+string class_name		# target concept/class
+string namespace		# namespace
+---
+string[] classes		# list of roles of the given class
+string[] multiplicity		# list of multiplicities for participants
+---
+bool feedback 

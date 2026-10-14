@@ -1,0 +1,5 @@
+# This service is used to delete the model described by the id from the unreal world.
+string id
+---
+# true if model was deleted successfully.
+bool success

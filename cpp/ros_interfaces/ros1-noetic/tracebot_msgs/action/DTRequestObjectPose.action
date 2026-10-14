@@ -1,0 +1,7 @@
+#request pose of object
+
+string id			#object id
+---
+geometry_msgs/PoseStamped pose	#returned pose
+---
+string feedback

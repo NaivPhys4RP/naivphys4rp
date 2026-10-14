@@ -1,0 +1,14 @@
+# this action interface extracts common pose of object either when locating, targetting or grasping
+#goal
+string class_name		#The class name of the object (e.g., Canister)
+string pose_type		#verb infinitiv characterizing the type of desired pose. e.g. (Insert (object pose after insertion), Locate (actual object pose), Grasp (grasp pose of object) )
+-------------------
+#result
+geometry_msgs/Pose pose	#The common pose
+# motion direction to approach the object for grasping it
+geometry_msgs/Vector3 offset
+# Appropriate grasp mode for the gripper
+GraspType grasp_type
+------------------------
+#feedback
+bool feedback			#false if the query processing fails for some reasons (e.g., no such info could be inferred, therefore result is not to be considered)

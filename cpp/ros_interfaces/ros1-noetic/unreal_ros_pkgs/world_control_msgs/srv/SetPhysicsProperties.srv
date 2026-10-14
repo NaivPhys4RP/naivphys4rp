@@ -1,0 +1,4 @@
+string id
+world_control_msgs/PhysicsProperties physics_properties
+---
+bool success

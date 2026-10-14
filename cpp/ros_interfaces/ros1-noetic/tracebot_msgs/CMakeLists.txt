@@ -1,0 +1,111 @@
+cmake_minimum_required(VERSION 3.0.2)
+project(tracebot_msgs)
+
+find_package(catkin REQUIRED COMPONENTS
+  actionlib
+  actionlib_msgs
+  geometry_msgs
+  message_generation
+  sensor_msgs
+  std_msgs
+  trajectory_msgs
+  vision_msgs
+)
+
+add_message_files(
+  FILES
+     DTQueryKnowledgeQuery.msg
+     DTQueryKnowledgeAnswer.msg
+     DTRobotParameterQuery.msg
+     DTRobotParameterAnswer.msg
+     DTVisualMatchAnswer.msg
+     KBNewComplexIndividualOutput.msg
+     SerializedMsg.msg
+     GraspType.msg
+     CloseType.msg
+     ReleaseType.msg
+     TTVStatusConsts.msg
+     TTVTaskTypeConsts.msg
+     TTVTaskTypeSensorConsts.msg
+     GPTactileSensorConsts.msg
+)
+
+add_service_files(
+   FILES
+   GPGetInstantPzr.srv
+   GPStartPzeRecord.srv
+   GPStopPzeRecord.srv
+   GPGetRecordedPze.srv
+)
+
+add_action_files(
+  DIRECTORY action
+  FILES
+    ComputeTrajectory.action
+    Dummy.action
+    DTAssertNewObject.action
+    DTQueryKnowledge.action
+    DTRequestColorImage.action
+    DTRequestComponentRegion.action
+    DTRequestObjectComponentPose.action
+    DTRequestObjectPose.action
+    DTRequestRegion.action
+    DTRequestRegionColorImage.action
+    DTRequestRobotParameter.action
+    DTReset.action
+    DTUpdateObject.action
+    DTVisualExpectationMatch.action
+    ExecuteGrasp.action
+    ExecuteTrajectory.action
+    InsertCanister.action
+    LiftObject.action
+    LocateObject.action
+    PreshapeGrasp.action
+    ReleaseGrasp.action
+    KBCommonPose.action
+    KBDataProperty.action
+    KBListClass.action
+    KBListConcept.action
+    KBListProperty.action
+    KBLoadOntology.action
+    KBNewIndividual.action
+    KBObjectProperty.action
+    KBQueryKnowledge.action
+    KBSubClass.action
+    KBGetClassId.action
+    KBReset.action
+    KBActionSuccessVerification.action
+    KBActionFeasibilityVerification.action
+    KBLoadDefaultOntology.action
+    KBNewComplexIndividual.action
+    KBAuditTrail.action
+    KBListIndividual.action
+    KBFakeTBProcess.action
+    KBVerifier.action
+    TTVInstantVerify.action
+    TTVBufferedVerify.action
+    TTVStartBuffering.action
+    TTVStopBuffering.action
+    AlignNeedleInHand.action
+)
+
+generate_messages(
+  DEPENDENCIES
+    actionlib_msgs
+    geometry_msgs
+    sensor_msgs
+    std_msgs
+    trajectory_msgs
+    vision_msgs
+)
+
+catkin_package(
+  CATKIN_DEPENDS
+    actionlib
+    actionlib_msgs
+    geometry_msgs
+    message_runtime
+    sensor_msgs
+    std_msgs
+    vision_msgs
+)

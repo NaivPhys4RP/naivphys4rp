@@ -1,0 +1,33 @@
+verifier:
+
+  name: KBCanisterGraspingFeasibilityCheck
+  description: Check the feasibility of a grasp action
+  mode: Feasibility
+
+domains:
+  - Grasping:
+      objects:
+        Actor:
+          - RightRobotGripper@Robotiq
+          - LeftRobotGripper@Robotiq
+          - RightRobotGripper@CEA
+          - LeftRobotGripper@CEA
+        Patient:
+          - Canister
+          - RinseBottleA
+          - RinseBottleK
+          - SoyBrothBottle
+      modalities: [Visual-Based, KB-Based]
+  - TraceablePickingUp:
+      objects:
+        Actor:
+          - RightRobotGripper@Robotiq
+          - LeftRobotGripper@Robotiq
+          - RightRobotGripper@CEA
+          - LeftRobotGripper@CEA
+        Patient:
+          - Canister
+          - RinseBottleA
+          - RinseBottleK
+          - SoyBrothBottle
+      modalities: [Visual-Based, KB-Based]

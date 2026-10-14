@@ -1,0 +1,30 @@
+# marker_type enum:
+uint8 POINT=0
+uint8 CUBE=1
+uint8 SPHERE=2
+uint8 CYLINDER=3
+uint8 CONE=4
+uint8 ARROW=5
+
+
+# This service will spawn new unreal marker (Actor).
+
+# Marker type
+uint8 marker_type
+
+# Pose of the marker
+geometry_msgs/Pose pose
+
+# color of the marker
+std_msgs/ColorRGBA color
+
+# Scale of the marker (default: 100 unreal units (height))
+float32 scale
+
+# Id of the Marker
+# Will be generated if not given
+# if there is already an marker with given id, the Point/Cube/... will be added to that marker.
+string marker_id
+---
+# generated/given id
+string marker_id

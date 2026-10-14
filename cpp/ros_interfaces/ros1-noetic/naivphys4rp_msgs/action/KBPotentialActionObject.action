@@ -1,0 +1,11 @@
+# Extracting all the action in which object can participate with a specific role.
+# Extracting all the objects that an object can afford with respect to specific disposition.
+
+string class_name		# target role
+string relation		# target domain relation
+string namespace		# namespace
+string type			# action or object
+---
+string[] classes		# list of classes
+---
+bool feedback 

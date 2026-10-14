@@ -1,0 +1,21 @@
+# Action definition for stopping data buffering and performing verification
+# Takes no arguments, returns a boolean
+# True means success, False means failure
+# duration is how long the verification took in seconds
+
+# Imports
+# Uncomment these lines if not already present in your file
+# from verification.msg import VerificationType
+# from actionlib_msgs.msg import GoalStatus
+
+# Definition
+# Goal
+---
+# Result
+bool success
+float32 duration
+string recorded_data_filepath
+uint8 status
+---
+# Feedback
+float32 progress

@@ -1,0 +1,8 @@
+#request 3D region
+
+string id				#id of target object (optional)
+string region_name			#name of target region,  either references object with the supplied id or is 'global'
+---
+vision_msgs/BoundingBox3D region	#3D bounding box of region in world coordinates
+---
+string feedback

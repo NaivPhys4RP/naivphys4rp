@@ -1,0 +1,16 @@
+<package format="2">
+  <name>belief_state</name>
+  <version>1.0.0</version>
+  <description>
+    This package provides perception systems with a very rich representation of the robot belief about the state of the world.
+  </description>
+  <maintainer email="fkenghag@uni-bremen.de">Franklin Kenghagho Kenfack</maintainer>
+  <license>BSD</license>
+
+  <url>https://ai.uni-bremen.de/team/franklin_kenghagho_kenfack</url>
+  <author>Franklin Kenghagho Kenfack</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>naivphys4rp_msgs</depend>
+
+</package>

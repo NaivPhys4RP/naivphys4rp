@@ -1,0 +1,7 @@
+#request color image from a specific camera
+
+string[] camera_id			#list of camera ids
+---
+sensor_msgs/Image[] images		#list of color images from different cameras
+---
+string feedback

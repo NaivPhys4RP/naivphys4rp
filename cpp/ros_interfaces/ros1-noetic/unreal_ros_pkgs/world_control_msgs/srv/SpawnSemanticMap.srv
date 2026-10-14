@@ -1,0 +1,12 @@
+# This service will spawn all models, constraints and relations in the unreal world.
+
+world_control_msgs/ModelDescription[] models
+world_control_msgs/ConstraintDescription[] constraints
+world_control_msgs/RelationDescription[] relations
+---
+# success is only true, when all models constraints and realtions spawned successfully.
+# if success is returned false, check individual lists to see what was not spawned.
+bool success
+string[] failed_model_ids
+string[] failed_constraint_ids
+world_control_msgs/RelationDescription[] failed_relations

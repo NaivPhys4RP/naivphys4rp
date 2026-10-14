@@ -1,0 +1,8 @@
+ae:
+  name: bs_naivphys4rp_demo
+fixedflow:
+  - BeliefLoader
+CollectionReader:
+  camera_config_files: ['naivphys4rp_camera.ini']
+RegionFilter:
+  enable_change_detection: false

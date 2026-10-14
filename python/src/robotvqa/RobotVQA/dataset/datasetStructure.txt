@@ -1,0 +1,118 @@
+In this file we present the structure of our dataset
+
+Each image has 5# copies namely:
+
+-A RGB Image: colorImageName.jpg
+-A Depth Image: depthImageName.jpg
+-A Segmentation Image: segmentationImageName.jpg
+-A normal Image: normalImageName.jpg
+-A EXR Depth Image: depthImageName.exr
+
+Each Image has a Json-file holding its annotation with the format:
+
+{
+ imageId: imageName,
+ questionId: questionid,              //not yet in use
+ cameraGlobalOrientation: cgOrientation,
+ cameraGlobalPosition: cgPosition,
+ objectRelationship: [
+                  {object1, relation, object2},
+				  ...
+				  {objectm, relation, objectm+1}
+                ]
+ objects: [
+		    {
+				objectId: id1,
+				objectName: name1,
+				objectShape: shape1,
+				objectColor: color1,
+				objectExternMaterial: eMaterial1,
+				objectInternMaterial: iMaterial1,
+				objectHardness: hardness1,
+				objectLocation: location1,
+				objectPickeability: True,
+				objectGraspability: False,
+				objectStackability: False,
+				objectOpenability: False,
+				objectGlobalOrientation: ogOrientation1,
+				objectGlobalPosition: ogPosition1,
+				objectLocalPosition: olPosition1,
+				objectLocalOrientation: olOrientation1,
+				objectCuboid: [(x1,y1), .., (x8,y8)],
+				objectSegmentationColor: [R,G,B],
+				objectSegmentationPixels: [(x1,y1), .., (xn,yn)]
+				
+				
+			},
+			
+			.
+			.
+			.,
+			{
+				objectId: idm,
+				...
+			}
+ 
+          ]
+}
+
+
+Some complementary informations:
+
+CAMERA COORDINATE SYSTEM:
+
+Orientations(angles) in degrees. 
+Z axis is upward and positive rotation around it is clockwise,
+X axis is frontward(toward the observer) and positive rotation around it is counterclockwise,
+Y axis is leftward and positive rotation around it is  counterclockwise.
+Positions(X,Y,Z) are in cm
+
+
+IMAGE COORDINATE SYSTEM:
+
+Origin: upper most left corner
+X axis: Horizontal rightward
+Y axis: Vertical downward
+Z axis: X cross Y -ward
+
+
+CAMERA INFO:
+
+Squarre pixels
+WidthxHeight: 640*480px ->99.52cm x 74.64cm
+Horizontal Field of View: 70 degree
+Aspect Ratio: 4/3
+Intrinsic Projection Matrix in cm: 
+[
+	[71.06   0      49.76],
+	[0     71.06    37.32],
+	[0       0          1],
+
+]
+
+Intrinsic Projection Matrix in px: 
+[
+	[457   0     320],
+	[0     457   240],
+	[0       0     1],
+
+]
+
+1 Pixel= 0.1555cm
+
+CUSTOM PROPERTIES:
+
+objectRelationship: {left, rigth, over, under, on, front, behind, has, in} 
+objectColor: {red, orange, brown, yellow, green, blue, white, gray, black, transparent}
+objectShape: cubic, pyramidal,conic, spherical, cylindrical, filiform, flat
+objectExternMaterial:  plastic, wood, glass, steel, cartoon, ceramic  
+objectInternMaterial:  liquid, gaz, solid,  powder
+objectHardness: strong, soft
+objectPickeability: true, false
+objectStackability: true, false
+objectOpenability: false, true
+objectGraspability: false, true
+
+
+//TODO
+- Set Stackability of Mug to true

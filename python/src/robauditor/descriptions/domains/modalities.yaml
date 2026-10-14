@@ -1,0 +1,119 @@
+KB-Based: # knowledge-based verification
+  topics: 
+    - source: Cell
+      value: 
+        dynamic_time_frame: /tf
+        static_time_frame: /tf_static
+  ontologies:
+    - package: tracebot-knowrob
+      pathname: ontology/SOMA-TraceBot.owl    
+    - package: tracebot-knowrob
+      pathname: ontology/TraceBotOntology.owl
+DT-Based: # Digital-Twin-based verification
+  topics:
+    - source: Robot@Tracebot.HeadRobotCamera@435D
+      value: 
+        color_info: /unreal_vision/color_info
+        raw_color_image: /unreal_vision/image_color
+        depth_info: /unreal_vision/depth_info
+        raw_depth_image: /unreal_vision/image_depth
+        raw_mask_image: /unreal_vision/image_object
+        mask_info: /unreal_vision/object_color_map
+        collision_detection: /tb_dt_interface/collision_reporter
+    - source: Cell
+      world_frame: tracebot_base_link
+      expected_pose_object_frame:
+        - object: Canister
+          target_frame: tracebot_pump_two_bottle_holder_head_link
+          expected_pose: [-0.45, -0.4, 5.9,0.,0.,1.,0]
+      value: 
+        dynamic_time_frame: /tf
+        static_time_frame: /tf_static
+    - source: Robot@Tracebot
+      value: 
+        joint_state: /unreal/joint_states
+Tactile-Based: # Tactile-based verification
+  topics:
+    - source: Robot@Tracebot.RightRobotArm@UR10.RightRobotGripper@CEA
+      value:
+        gripper:
+          package: tracebot-knowrob
+          pathname: right_hand_tactile_data_filepath  
+    - source: Robot@Tracebot.LeftRobotArm@UR10.LeftRobotGripper@CEA
+      value:
+        gripper:
+          package: tracebot-knowrob
+          pathname: left_hand_tactile_data_filepath
+Tactile-Pze-Based: # Tactile-based verification : piezoelectric part
+  topics:
+    - source: Robot@Tracebot.RightRobotArm@UR10.RightRobotGripper@CEA
+      start_recording_action: 
+        name: start_buffering_right
+        type: ros_action_server
+      stop_recording_action: 
+        name: stop_buffering_right
+        type: ros_action_server
+      value:
+        hand:
+          - package: tactile_verification
+          - pathname: right_hand_tactile_data_filepath  
+    - source: Robot@Tracebot.LeftRobotArm@UR10.LeftRobotGripper@CEA
+      start_recording_action: 
+        name: start_buffering_left
+        type: ros_action_server
+      stop_recording_action: 
+        name: stop_buffering_left
+        type: ros_action_server     
+      value:
+        hand:
+          - package: tactile_verification
+          - pathname: left_hand_tactile_data_filepath
+Tactile-Pzr-Based: # Tactile-based verification : piezo resistive part
+  topics:
+    - source: Robot@Tracebot.RightRobotArm@UR10.RightRobotGripper@CEA
+      start_recording_action: 
+        name: start_buffering_right
+        type: ros_action_server
+      stop_recording_action: 
+        name: stop_buffering_right
+        type: ros_action_server
+      value: 
+        hand_pzr: /right_hand_tactile_pzr
+        hand_contact_points: /right_hand_contact_points
+    - source: Robot@Tracebot.LeftRobotArm@UR10.LeftRobotGripper@CEA
+      start_recording_action: 
+        name: start_buffering_left
+        type: ros_action_server
+      stop_recording_action: 
+        name: stop_buffering_left
+        type: ros_action_server
+      value: 
+        hand_pzr: /left_hand_tactile_pzr
+        hand_contact_points: /left_hand_contact_points 
+
+Odometry-Based: # Odometry-based verification
+  topics: 
+    - source: Robot@Tracebot
+      value: 
+        raw_joint_state: /joint_states
+        joint_state: /adapted_joint_states
+Visual-Based: # Visual-Based verification
+  topics:
+    - source: Robot@Tracebot.HeadRobotCamera@435D
+      throttle_frequency: 0.5
+      throttle_value: ['raw_color_image']
+      value: 
+        color_info: /tracebot_camera/color/camera_info
+        raw_color_image: /tracebot_camera/color/image_raw
+        raw_locate_result: /locate_object/result
+    - source: Robot@Tracebot.SceneRobotCamera@435D
+      throttle_frequency: 0.5
+      throttle_value: ['raw_color_image']
+      value: 
+        color_info: /camera/rgb/camera_info
+        raw_color_image: /camera/rgb/image_raw
+Acoustic-Based: # Visual-Based verification
+  topics:
+    - source: Robot@Tracebot.SceneRobotCamera@Kinect.SceneRobotMicrophone@Kinect
+      value: 
+        sound_data: /audio 

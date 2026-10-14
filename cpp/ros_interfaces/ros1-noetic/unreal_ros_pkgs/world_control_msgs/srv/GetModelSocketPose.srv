@@ -1,0 +1,8 @@
+# This service is used to get the pose of the models specific socket described by the given id
+string id
+string socket
+---
+# Pose in UE4 world coordinates with ROS conventions
+geometry_msgs/Pose pose
+# true if model could be found
+bool success

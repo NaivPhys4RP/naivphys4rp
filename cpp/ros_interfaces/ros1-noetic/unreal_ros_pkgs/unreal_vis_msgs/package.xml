@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>unreal_vis_msgs</name>
+  <version>1.0.0</version>
+  <description>The unreal_vis_msgs package</description>
+
+  <maintainer email="dev@bjoernveit.com">Björn Veit</maintainer>
+  <author email="dev@bjoernveit.com">Björn Veit</author>
+
+  <license>BSD</license>
+
+
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+
+
+  <export>
+
+  </export>
+</package>

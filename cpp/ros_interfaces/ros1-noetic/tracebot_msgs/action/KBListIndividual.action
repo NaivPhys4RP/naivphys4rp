@@ -1,0 +1,6 @@
+# this action returns all the individuals of a class created so far
+string class_name		# the target class
+---
+string[] list_individuals	# List of individuals from the target class
+---
+bool feedback

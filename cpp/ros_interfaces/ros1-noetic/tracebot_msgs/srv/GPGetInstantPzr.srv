@@ -1,0 +1,2 @@
+---
+std_msgs/Float64MultiArray[] pzr_images # latest pzr images of all sensors of a hand

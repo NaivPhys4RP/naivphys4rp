@@ -1,0 +1,8 @@
+# request robot parameter after action
+
+string id				#id of target object
+DTRobotParameterQuery[] query		#list of parameters as serialized jsons. opening distance gripper on arm X; arm X has grasp
+---
+DTRobotParameterAnswer[] result		#list of values of parameters in the order of queries
+---
+string feedback

@@ -1,0 +1,9 @@
+# asserting a new object in DT
+
+string class_name			#the class name of the object
+geometry_msgs/PoseStamped pose		#the pose of the object
+---
+bool success				#true if assertion successful and false otherwise
+string id				#randomly generated unique ID for this object
+---
+string feedback

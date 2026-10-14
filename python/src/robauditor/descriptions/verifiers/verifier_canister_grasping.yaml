@@ -1,0 +1,14 @@
+verifier:
+
+  name: /verify_canister_grasp
+  description: Check the success of a grasp action
+  mode: Success
+
+domains:
+  - Grasping:
+      objects:
+        Actor:
+          - RightRobotGripper@Robotiq
+        Patient:
+          - Canister
+      modalities: [Odomedry-Based]

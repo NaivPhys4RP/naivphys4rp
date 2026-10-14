@@ -1,0 +1,10 @@
+# Extracting the domain relations that provide potential actions an object can play a crucial role
+# Extracting the domain relations that provide potential objects an object can have a specific dispositio (towards affordances)
+
+string class_name		# target role
+string namespace		# namespace
+string type			# Action or Object
+---
+string[] relations		# list of relations
+---
+bool feedback 

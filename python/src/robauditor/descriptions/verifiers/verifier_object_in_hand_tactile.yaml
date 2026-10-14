@@ -1,0 +1,15 @@
+verifier:
+
+  name: /verify_object_in_hand
+  description: Check the success of a grasp action
+  mode: Success
+
+domains:
+   - Grasping:
+      objects:
+        Actor:
+          - LeftRobotGripper@CEA
+          - RightRobotGripper@CEA
+        Patient:
+          - Canister
+      modalities: [Tactile-Pzr-Based]

@@ -1,0 +1,21 @@
+borb==2.1.17              # via -r requirements.in
+certifi==2023.7.22        # via requests
+cffi==1.15.1              # via cryptography
+charset-normalizer==3.2.0  # via requests
+cryptography==41.0.3      # via borb
+fonttools==4.42.1         # via borb
+idna==3.4                 # via requests
+lxml==4.9.3               # via borb
+pillow==10.0.0            # via borb, qrcode
+pycparser==2.21           # via cffi
+pypng==0.20220715.0       # via qrcode
+python-barcode==0.15.1    # via borb
+qrcode[pil]==7.4.2        # via borb
+requests==2.31.0          # via borb
+typing-extensions==4.7.1  # via qrcode
+urllib3                   # via requests
+testresources
+PyYAML
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools

@@ -1,0 +1,9 @@
+# This service is used to delete the model described the Type and Key (ignore_value=true) OR by Type,Key AND value (ignore_value=false)
+string type_to_delete
+string key_to_delete
+string value_to_delete
+bool ignore_value
+
+---
+# true if model(s) have been deleted sucessfully
+bool success

@@ -1,0 +1,31 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "Procedural Object Interpreter",
+  "Description": "Imports .obj, .mtl, and texture files into Unreal Engine 4.27 and generates Static, Destructible, and Physical Material assets.",
+  "Category": "Importers",
+  "CreatedBy": "Kenghagho Kenfack Franklin",
+  "CreatedByURL": "https://github/fkenghagho",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "CanContainContent": false,
+  "IsBetaVersion": true,
+  "IsExperimentalVersion": false,
+  "EnabledByDefault": true,
+  "Modules": [
+    {
+      "Name": "UProceduralObjectInterpreter",
+      "Type": "Editor",
+      "LoadingPhase": "Default"
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "ApexDestruction",
+      "Enabled": true
+    }
+  ]
+}
+

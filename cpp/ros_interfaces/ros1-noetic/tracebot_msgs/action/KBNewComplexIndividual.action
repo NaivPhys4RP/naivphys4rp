@@ -1,0 +1,6 @@
+# this action creates an instance of a class from the ontology
+string class_name	# target concept/class
+---
+KBNewComplexIndividualOutput[] pair_ids	# pairs of object-parent ids of the created instance
+---
+bool feedback

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>tracebot-knowrob</name>
+  <version>0.0.0</version>
+  <description>The knowrob_tracebot package</description>
+  <maintainer email="fkenghag@uni-bremen.de">Franklin Kenghagho Kenfack</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>catkin_virtualenv</build_depend>
+
+  <depend>knowrob</depend>
+  <depend>actionlib</depend>
+  <depend>rospy</depend>
+  <depend>tracebot_msgs</depend>
+  <depend>cv_bridge</depend>
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+    <pip_requirements>requirements.txt</pip_requirements>
+  </export>
+</package>

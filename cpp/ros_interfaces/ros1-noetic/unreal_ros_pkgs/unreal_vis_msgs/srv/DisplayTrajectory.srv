@@ -1,0 +1,20 @@
+# This service can be used to display a trajecotry of points.
+# The trajectory will change its color form the first to the last point,
+# unless begin and end color are set to same value.
+
+# Points of trajectory
+geometry_msgs/Point[] points
+
+# Color of first point
+std_msgs/ColorRGBA color_begin
+
+# Color of the last point
+std_msgs/ColorRGBA color_end
+
+# Id of the Marker
+# Will be generated if not given
+# if there is already an marker with given id, the Trajectory will be added to that marker (same Actor).
+string marker_id
+---
+# generated/given id
+string marker_id

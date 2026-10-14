@@ -1,0 +1,7 @@
+# this action generate an audit trail pdf
+string path_name	# path to store the generated audit trail pdf
+---
+bool status		# whether the trail was successfully created
+string audit_trail	# a json version of the audit trail. Ease the export of the audit trail
+---
+bool feedback

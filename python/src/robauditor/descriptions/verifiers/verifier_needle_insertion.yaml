@@ -1,0 +1,21 @@
+verifier:
+
+  name: /verify_needle_insertion
+  description: Check if a needle insertion event occured during a recorded process
+  mode: Success
+
+domains:
+
+  - Pushing:
+      objects:
+        Actor:
+          - LeftRobotGripper@CEA
+          - RightRobotGripper@CEA
+        Patient:
+          - Needle
+        Destination:
+          - RinseBottleA
+          - RinseBottleK
+          - SoyBrothBottle
+
+      modalities: [Tactile-Pze-Based]

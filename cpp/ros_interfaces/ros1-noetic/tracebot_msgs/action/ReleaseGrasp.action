@@ -1,0 +1,5 @@
+ReleaseType release_grasp_type          # opening the fingers according to the type of control
+---
+bool release_grasp_status               # grasp releasing successfully completed or not
+---
+string feedback

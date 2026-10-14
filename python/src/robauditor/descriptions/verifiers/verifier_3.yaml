@@ -1,0 +1,35 @@
+# the verifier is a ros action
+verifier:
+  name: SmallObjectLocateCheck        # the name of the ros action. Don't care about the name. Any string is acceptable
+  description: Check the success of a locate action  # description of what is verified and eventually how (e.g., slippage detection)
+  mode: Success    # indicates whether it is a feasibility or success check
+domains:
+  - TraceableLocating:    # Primitive actions
+      objects:      # Objects as participant roles in actions
+        Support: []    # can be participant in a supporting event e.(e.g., Canister is on Workbench). GetSupport(action_id)
+        Container: []    # can be participant in a containing event (e.g., Canister is in DrainTray). GetContainer(action_id)
+        Actor: []    # Deepest (in Robot Description Tree) identifiable robot effectors that causes action (e.g., Robot@Tracebot.LeftArm@UR10.Gripper@Robotiq). GetActor(action_id)
+        SensorDevice:    # Deepest sensors to have capture the scene (e.g., Room@Tracebot.Camera@D435, Robot@T..Head.Camera@D435, ...@Tracebot.LeftArm@UR10.Camera@D435). GetSensor(action_id, msg_type, nb_msgs): [{modality, type, source, data{timestamp, msg}}]
+          - Robot@Tracebot.HeadRobotCamera@435D
+        Stimulus:    # Object participant that undergoes action (e.g., detect canister, place canister, grasp canister). GetPatient(action_id)
+          - Needle
+          - NeedleCap
+          - RedCap
+        Destination: []  # Object participant representing destination (e.g., transporting rinse fluid (patient) from BollteA (source) to Canister (destination)). GetDestination(action_id)
+        Source: []    # See Destination above. GetSource(action_id)
+        Tool: []    # Object participant that can be used to act on the patient (e.g., Scissor (tool) for cutting tube (patient)). GetTool(action_id)
+        Accommodation: []  # The place in which the action take place (e.g., room such as kitchen, labor). Not relevant for Tracebot since static place. GetAccommodation(action_id)
+        
+      modalities: [Visual-Based, DT-Based, KB-Based]
+
+# the inputs and outputs of the verifiers are fixed
+#inputs:
+#  action_id: string
+#outputs:
+#  decision: bool
+#  confidence: float64
+#  explanation: string
+
+# We distinguish verification from correction
+# The correction takes place when a verification is not satisfying
+# However, a correction might already takes place implicitly before verification 

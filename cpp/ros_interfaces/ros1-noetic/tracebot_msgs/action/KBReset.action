@@ -1,0 +1,6 @@
+#this action delete everything from the knowledge base
+#no argument is required now
+---
+bool status    # The status of the operation
+---
+bool feedback

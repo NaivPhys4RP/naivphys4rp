@@ -1,0 +1,3 @@
+uint8[] sensors_id  # list of the sensors of insterest
+---
+bool record_stopped # True if the stop recording command has been successfully sent to the gripper controler

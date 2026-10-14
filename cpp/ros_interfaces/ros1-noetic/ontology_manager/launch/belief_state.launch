@@ -1,0 +1,3 @@
+<launch>  
+  <node name="belief_state_node" pkg="belief_state" type="BeliefManager.py" output="screen"/> 
+</launch>

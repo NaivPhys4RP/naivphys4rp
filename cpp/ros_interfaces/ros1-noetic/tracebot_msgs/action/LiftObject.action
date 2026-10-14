@@ -1,0 +1,11 @@
+# Direction and magnitude of the required displacement to lift the object
+geometry_msgs/Vector3Stamped lift_direction
+---
+# Final positioning error after lifting is done
+geometry_msgs/Twist stationary_error
+---
+# Desired and actual position of the object at the current time
+geometry_msgs/PoseStamped desired_position
+geometry_msgs/PoseStamped actual_position
+# Error between the desired and actual position of the object at the current time
+geometry_msgs/Twist tracking_error

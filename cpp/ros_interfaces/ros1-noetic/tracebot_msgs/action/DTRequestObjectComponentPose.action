@@ -1,0 +1,9 @@
+#request object component pose
+
+string id				#id of target object
+string component_name			#name of component
+---
+geometry_msgs/PoseStamped wolrd_pose	#returned component world pose
+geometry_msgs/PoseStamped relative_pose	#returned component pose relative to parent
+---
+string feedback

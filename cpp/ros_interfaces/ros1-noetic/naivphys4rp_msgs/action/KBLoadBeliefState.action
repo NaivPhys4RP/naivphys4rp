@@ -1,0 +1,21 @@
+# this action interface loads a specific UE-MAP as belief state and initalizes it
+
+#goal
+
+
+string project_path		#The path to the ue project folder
+string ue_path			#The path to the ue engine binary
+string map_relative_path	#The relative path from the ue project folder root to the map file
+string binary_path		#The path to the executable
+bool is_from_binary		#Whether the belief state is loaded from an executable
+-------------------
+
+#result
+
+bool status			#return true if loading is successful and false otherwise
+
+------------------------
+
+#feedback
+
+bool feedback			#return if the execution takes place successfully

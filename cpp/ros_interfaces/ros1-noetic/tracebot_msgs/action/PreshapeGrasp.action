@@ -1,0 +1,5 @@
+GraspType grasp_type            # selected type of grasp (cylindrical, spherical, etc.)
+---
+bool grasp_id_status            # Preshape successfully completed or not
+---
+string feedback

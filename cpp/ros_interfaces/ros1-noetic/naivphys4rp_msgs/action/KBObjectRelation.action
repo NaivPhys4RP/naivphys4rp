@@ -1,0 +1,8 @@
+# the relation among two objects from the ontology
+
+string class_name1		# target concept/class
+string class_name2		# namespace
+---
+string[] relations		# list of relations of the given class
+---
+bool feedback 

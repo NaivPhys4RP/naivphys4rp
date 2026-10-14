@@ -1,0 +1,7 @@
+# this action creates an instance of a class from the ontology
+
+string class_name		# target concept/class
+---
+string object_id		# id of the created instances
+---
+bool feedback 

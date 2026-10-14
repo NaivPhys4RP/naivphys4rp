@@ -1,0 +1,5 @@
+# This service is used to get the model pose described by the id.
+string id
+---
+# Pose of the model
+geometry_msgs/Pose pose
