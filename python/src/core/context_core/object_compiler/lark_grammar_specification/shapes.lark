@@ -1,0 +1,89 @@
+%import terminals (aperture_dimensions, hollow_sphere_dimensions, closed_sphere_dimensions, hollow_cone_dimensions, closed_cone_dimensions, hollow_torus_dimensions, closed_torus_dimensions, LBRACE, RBRACE, LBRACK, RBRACK, COLON, COMMA, COLOR, MATERIAL, OUTER_RADIUS, INNER_RADIUS, START_LATITUDE, END_LATITUDE, SEGMENTS, RINGS, DIMENSIONS, OUTER_BOTTOM_RADIUS, OUTER_TOP_RADIUS, HEIGHT, INNER_BOTTOM_RADIUS, INNER_TOP_RADIUS, MAJOR_RADIUS, MINOR_RADIUS, ARC_DEGREES, MAJOR_SEGMENTS, MINOR_SEGMENTS, RADIUS, POSITION_Z, ESCAPED_STRING, INT, FLOAT, DECIMAL, CR, LF, NEWLINE, WS)
+
+
+start:  (conical_full_hollow_shape | spherical_full_hollow_shape | torus_full_hollow_shape | conical_full_closed_shape | spherical_full_closed_shape | torus_full_closed_shape)
+
+
+// === 1. Design Property Definitions ===
+
+// Aesthetic Design (at the elementary shape level)
+container_aesthetic_design : LBRACE AESTHETICS COLON LBRACE color_list COMMA texture_setting RBRACE RBRACE
+
+color_list : COLORS COLON LBRACK COLOR (COMMA COLOR)* RBRACK
+
+texture_setting : TEXTURE COLON texture_type
+
+texture_type: PATTERN_T | PICTURE_T | SOLID_T | GRADIENT_T
+
+// Structural Design (at the elementary shape level)
+
+container_structural_design :  LBRACE STRUCTURAL COLON LBRACE material_setting COMMA fragility_rate COMMA absolute_fragility COMMA density_param COMMA friction_param COMMA restitution_param COMMA transparency_param RBRACE RBRACE
+
+material_setting      : MATERIAL_T COLON MATERIAL
+
+fragility_rate        : FRAGILITY_RATE COLON DECIMAL
+
+absolute_fragility    : ABSOLUTE_FRAGILITY COLON DECIMAL
+
+density_param         : DENSITY COLON DECIMAL
+
+friction_param        : FRICTION COLON DECIMAL
+
+restitution_param     : RESTITUTION COLON DECIMAL
+
+transparency_param     : TRANSPARENCY COLON DECIMAL
+
+
+// === 2. Core Shapes ===
+// Each shape becomes: { "shape_type": { dimensions, aesthetics, structure } }
+
+conical_full_hollow_shape :  LBRACE CONICAL_HOLLOW_SHAPE COLON LBRACE DIMENSIONS COLON hollow_cone_dimensions COMMA AESTHETICS COLON container_aesthetic_design COMMA STRUCTURAL COLON container_structural_design RBRACE RBRACE 
+
+spherical_full_hollow_shape : LBRACE SPHERICAL_HOLLOW_SHAPE COLON LBRACE DIMENSIONS COLON hollow_sphere_dimensions COMMA AESTHETICS COLON container_aesthetic_design COMMA STRUCTURAL COLON container_structural_design RBRACE RBRACE
+
+torus_full_hollow_shape : LBRACE TORUS_HOLLOW_SHAPE COLON LBRACE DIMENSIONS COLON hollow_torus_dimensions COMMA AESTHETICS COLON container_aesthetic_design COMMA STRUCTURAL COLON container_structural_design RBRACE RBRACE
+
+conical_full_closed_shape : LBRACE CONICAL_CLOSED_SHAPE COLON LBRACE DIMENSIONS COLON closed_cone_dimensions COMMA AESTHETICS COLON container_aesthetic_design COMMA STRUCTURAL COLON container_structural_design RBRACE RBRACE
+
+spherical_full_closed_shape : LBRACE SPHERICAL_CLOSED_SHAPE COLON LBRACE DIMENSIONS COLON closed_sphere_dimensions COMMA AESTHETICS COLON container_aesthetic_design COMMA STRUCTURAL COLON container_structural_design RBRACE RBRACE
+
+torus_full_closed_shape : LBRACE TORUS_CLOSED_SHAPE COLON LBRACE DIMENSIONS COLON closed_torus_dimensions COMMA AESTHETICS COLON container_aesthetic_design COMMA STRUCTURAL COLON container_structural_design RBRACE RBRACE
+
+
+// === 3. Terminals ===
+// Additional terminals for dictionary keys (to be grounded in terminals.lark or inline here)
+STRUCTURAL : "\"structural\""
+AESTHETICS : "\"aesthetics\""
+COLORS : "\"colors\""
+TEXTURE : "\"texture\""
+
+MATERIAL_T : "\"material\""
+FRAGILITY_RATE : "\"fragility_rate\""
+ABSOLUTE_FRAGILITY : "\"absolute_fragility\""
+DENSITY : "\"density\""
+FRICTION : "\"friction\""
+RESTITUTION : "\"restitution\""
+TRANSPARENCY : "\"transparency\""
+
+CONICAL_HOLLOW_SHAPE : "\"conical_hollow_shape\""
+SPHERICAL_HOLLOW_SHAPE : "\"spherical_hollow_shape\""
+TORUS_HOLLOW_SHAPE : "\"torus_hollow_shape\""
+
+CONICAL_CLOSED_SHAPE : "\"conical_closed_shape\""
+SPHERICAL_CLOSED_SHAPE : "\"spherical_closed_shape\""
+TORUS_CLOSED_SHAPE : "\"torus_closed_shape\""
+
+PATTERN_T : "\"PATTERN_T\""
+PICTURE_T : "\"PICTURE_T\""
+SOLID_T   : "\"SOLID_T\""
+GRADIENT_T: "\"GRADIENT_T\""
+
+
+
+
+
+
+// === 4. Imports ===
+
+%ignore /[\t \f]+/
+

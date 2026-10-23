@@ -1,0 +1,83 @@
+%import shapes (conical_full_hollow_shape, spherical_full_hollow_shape, torus_full_hollow_shape, conical_full_closed_shape, spherical_full_closed_shape, torus_full_closed_shape, aperture_dimensions,INT, LBRACE, RBRACE, COLON, LBRACK, RBRACK, DIMENSIONS, COMMA, DECIMAL)
+
+
+start:  ( body | handle | closure | spout | feet | aperture | support)
+
+
+// 3. Core Components and Shapes //
+
+// Body: The core structural component. Now requires one or more hollow parts and a solid base.
+
+body: LBRACE BODY COLON LBRACE TORSO COLON LBRACK body_hollow_part (COMMA body_hollow_part)* RBRACK COMMA BASE COLON base_shape RBRACE RBRACE
+
+
+body_hollow_part : LBRACE TORSO COLON (conical_full_hollow_shape | spherical_full_hollow_shape | torus_full_hollow_shape) RBRACE
+
+// Base Shape (The solid required base for the composite body)
+
+base_shape : LBRACE BASE COLON (conical_full_closed_shape | spherical_full_closed_shape) RBRACE
+
+// Aperture (The opening geometry and location)
+
+aperture : LBRACE APERTURE COLON LBRACE APERTURE_PROFILE COLON aperture_profile COMMA DIMENSIONS COLON aperture_dimensions RBRACE RBRACE
+
+aperture_profile : LBRACE APERTURE_PROFILE COLON (circle_profile | polygon_profile) RBRACE
+
+circle_profile : CIRCLE
+polygon_profile : LBRACE POLYGON COLON number_segments RBRACE
+
+// Closure (Lid or Stopper)
+
+closure : LBRACE CLOSURE COLON (closure_lid | closure_stopper) RBRACE
+
+// Closure Lid: Now a composite part.
+
+closure_lid : LBRACE LID COLON LBRACE TORSO COLON (conical_full_closed_shape | spherical_full_closed_shape) COMMA BASE COLON base_shape [COMMA HANDLE COLON handle] RBRACE RBRACE
+
+closure_stopper : LBRACE STOPPER COLON stopper_shape RBRACE
+
+// Stopper Shape (Must be conical or spherical)
+
+stopper_shape : conical_full_closed_shape | spherical_full_closed_shape
+
+// Handle, Spout, Feet (Repeatable parts)
+
+handle : LBRACE HANDLE COLON handle_shape RBRACE
+
+handle_spoon : LBRACE HANDLE COLON conical_full_closed_shape RBRACE
+
+spout : LBRACE SPOUT COLON spout_full_hollow_shape RBRACE
+feet : LBRACE FEET COLON feet_shape RBRACE
+
+handle_shape : conical_full_closed_shape | spherical_full_closed_shape | torus_full_closed_shape
+
+feet_shape : conical_full_closed_shape | spherical_full_closed_shape | torus_full_closed_shape
+
+spout_full_hollow_shape : conical_full_hollow_shape | torus_full_hollow_shape
+
+// Aperture Structural Parameters
+
+number_segments :  LBRACE NUM_SEGMENTS COLON INT RBRACE
+
+//support
+
+support: LBRACE SUPPORT COLON (conical_full_closed_shape | spherical_full_closed_shape) RBRACE
+
+// terminals
+SPOUT: "\"spout\""
+FEET: "\"feet\""
+HANDLE: "\"handle\""
+STOPPER: "\"stopper\""
+LID: "\"lid\""
+NUM_SEGMENTS: "\"num_segments\""
+CIRCLE: "\"CIRCLE\""
+POLYGON : "\"POLYGON\""
+BODY: "\"body\""
+TORSO : "\"torso\""
+BASE : "\"base\""
+CLOSURE : "\"closure\""
+APERTURE : "\"aperture\""
+SUPPORT : "\"support\""
+APERTURE_PROFILE : "\"aperture_profile\""
+
+

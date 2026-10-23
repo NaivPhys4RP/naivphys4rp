@@ -1,0 +1,47 @@
+Terminals
+ ├─ Brackets/Separators: LBRACE, RBRACE, LBRACK, RBRACK, COLON, COMMA
+ ├─ Primitives: INT, DECIMAL, FLOAT, ESCAPED_STRING
+ ├─ Labels: DIMENSIONS, COLORS, MATERIAL, TEXTURE, STRUCTURAL, etc.
+
+Structured Dimensions
+ ├─ aperture_dimensions
+ ├─ hollow_sphere_dimensions / closed_sphere_dimensions
+ ├─ hollow_cone_dimensions / closed_cone_dimensions
+ ├─ hollow_torus_dimensions / closed_torus_dimensions
+
+Design Properties
+ ├─ container_aesthetic_design
+ │   ├─ color_list
+ │   └─ texture_setting
+ └─ container_structural_design
+     ├─ material_setting
+     ├─ fragility_rate
+     └─ density/friction/restitution
+
+Core Shapes
+ ├─ conical_full_hollow_shape / conical_full_closed_shape
+ ├─ spherical_full_hollow_shape / spherical_full_closed_shape
+ └─ torus_full_hollow_shape / torus_full_closed_shape
+
+Component Parts
+ ├─ body (hollow parts + base)
+ ├─ aperture (profile + dimensions)
+ ├─ closure (lid or stopper)
+ ├─ handle / spout / feet
+ └─ support
+
+Functional Designs
+ ├─ deep_container: mug, bowl, pot, bottle
+ ├─ flat_container: plate, spoon
+ ├─ big_storage_container: shelf, drawer
+ └─ small_storage_container: box
+
+Scene Containers
+ └─ start_container: container (all above)
+
+Furniture
+ └─ start_support: chair, table (with supports & optional feet)
+
+Top-Level
+ ├─ start → scene_container | scene_support
+

@@ -1,0 +1,37 @@
+%import generic_containers (start_container,support,feet,COMMA, RBRACK, LBRACK, RBRACE, LBRACE, COLON, BODY, HANDLE, APERTURE, SPOUT, FEET, CLOSURE, INT, DECIMAL, TORSO, BASE)
+
+// --------------------
+// Top-Level Furniture
+// --------------------
+start_support: LBRACE SCENE_SUPPORT COLON furniture RBRACE
+
+furniture: LBRACE FURNITURE COLON (chair | table) RBRACE
+
+
+// --------------------
+// Chair
+// --------------------
+chair: LBRACE CHAIR COLON LBRACE SEAT_SUPPORT COLON support [COMMA BACK_SUPPORT COLON support] [COMMA FEET COLON feet_list] RBRACE RBRACE
+
+// Table
+table: LBRACE TABLE COLON LBRACE TABLE_SUPPORT COLON support [COMMA FEET COLON feet_list] RBRACE RBRACE
+
+// --------------------
+// Parts
+// --------------------
+
+feet_list: LBRACK feet (COMMA feet)* RBRACK
+
+
+// --------------------
+// Terminals
+// --------------------
+CHAIR: "\"chair\""
+TABLE:  "\"table\""
+SEAT_SUPPORT: "\"seat_support\""
+BACK_SUPPORT: "\"seat_support\""
+TABLE_SUPPORT: "\"table_support\""
+SCENE_SUPPORT: "\"scene_support\""
+FURNITURE: "\"furniture\""
+
+

@@ -1,0 +1,17 @@
+%import small_storage_containers (small_storage_container,deep_container, flat_container, big_storage_container,support,feet,  COMMA, RBRACK, LBRACK, RBRACE, LBRACE, COLON, BODY, HANDLE, APERTURE, SPOUT, FEET, CLOSURE, INT, DECIMAL, TORSO, BASE)
+
+// --------------------
+// 1. Top-Level Design Categories as JSON objects
+// --------------------
+
+start_container: LBRACE SCENE_CONTAINER COLON container RBRACE
+container: deep_container | flat_container | big_storage_container | small_storage_container
+
+// --------------------
+// 2. Terminal Symbols for JSON keys
+// --------------------
+
+SCENE_CONTAINER:        "\"scene_container\""
+
+
+

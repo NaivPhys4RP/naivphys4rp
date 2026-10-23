@@ -1,0 +1,46 @@
+%import functional_parts (body, aperture, closure, handle, handle_spoon, feet, spout, body_hollow_part, base_shape,conical_full_hollow_shape, support, COMMA, RBRACK, LBRACK, RBRACE, LBRACE, COLON, BODY, HANDLE, APERTURE, SPOUT, FEET, CLOSURE, INT, DECIMAL, TORSO, BASE)
+
+// --------------------
+// 1. Top-Level Design Categories as JSON objects
+// --------------------
+
+start: LBRACE DEEP_CONTAINER COLON deep_container RBRACE
+deep_container: mug | bowl | pot | bottle
+
+mug: LBRACE MUG COLON  mug_functional_design RBRACE
+bowl: LBRACE BOWL COLON bowl_functional_design RBRACE 
+pot: LBRACE POT COLON  pot_functional_design RBRACE 
+bottle: LBRACE BOTTLE COLON bottle_functional_design RBRACE
+
+// --------------------
+// 2. Functional Design Rules
+// --------------------
+
+// Mug: simple single-part body, optional closure, mandatory handle, optional spout/feet
+mug_functional_design: LBRACE MUG COLON LBRACE BODY COLON body COMMA APERTURE COLON aperture [COMMA CLOSURE COLON closure] [COMMA HANDLE COLON handle_list] [COMMA SPOUT COLON spout] [COMMA FEET COLON feet] RBRACE RBRACE
+
+handle_list: LBRACK handle [COMMA handle_list] RBRACK
+
+// Bowl: deep body, optional closure, optional feet
+bowl_functional_design: LBRACE BOWL COLON LBRACE DEEP_BODY COLON body COMMA APERTURE COLON aperture [COMMA CLOSURE COLON closure] [COMMA FEET COLON feet] RBRACE RBRACE
+
+// Pot: deep body, two handles, optional closure, optional feet
+pot_functional_design: LBRACE POT COLON LBRACE BODY COLON body COMMA APERTURE COLON aperture [COMMA CLOSURE COLON closure] COMMA HANDLE COLON LBRACK handle COMMA handle RBRACK [COMMA FEET COLON feet] RBRACE RBRACE
+
+// Bottle: body + neck + aperture + closure, optional spout/feet
+bottle_functional_design: LBRACE BOTTLE COLON LBRACE DEEP_BODY COLON body COMMA APERTURE COLON aperture COMMA CLOSURE COLON closure COMMA SPOUT COLON spout RBRACE RBRACE
+
+
+
+// --------------------
+// 3. Terminal Symbols for JSON keys
+// --------------------
+
+MUG:        "\"mug\""
+BOWL:       "\"bowl\""
+POT:        "\"pot\""
+BOTTLE:     "\"bottle\""
+DEEP_BODY:  "\"deep_body\""
+DEEP_CONTAINER:  "\"deep_container\""
+
+

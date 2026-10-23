@@ -1,0 +1,27 @@
+%import big_storage_containers (deep_container, flat_container, big_storage_container, body, aperture, closure, handle, feet, spout, base_shape, conical_full_hollow_shape, stopper_shape,support,feet, COMMA, RBRACK, LBRACK, RBRACE, LBRACE, COLON, BODY, HANDLE, APERTURE, SPOUT, FEET, CLOSURE, INT, DECIMAL, TORSO, BASE)
+
+// --------------------
+// 1. Top-Level Design Categories as JSON objects
+// --------------------
+
+start: LBRACE BOX_CONTAINER COLON small_storage_container RBRACE
+small_storage_container: box
+
+box: LBRACE BOX COLON box_functional_design RBRACE
+
+// --------------------
+// 2. Functional Design Rules
+// --------------------
+
+// Box Container: a fully closed conical body (segments + base) with a top closure
+box_functional_design: LBRACE BOX COLON LBRACE  TORSO COLON conical_full_hollow_shape COMMA BASE COLON base_shape COMMA BOX_APERTURE COLON aperture RBRACE RBRACE
+
+
+// --------------------
+// 3. Terminal Symbols for JSON keys
+// --------------------
+
+BOX_CONTAINER: "\"box_container\""
+BOX: "\"box\""
+BOX_APERTURE: "\"box_aperture\""
+

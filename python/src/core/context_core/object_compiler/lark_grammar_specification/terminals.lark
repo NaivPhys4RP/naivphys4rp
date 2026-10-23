@@ -1,0 +1,149 @@
+// 4. Design Property Definitions and Structured Dimensions //
+
+// Structured Aperture Dimensions
+
+start:  ( aperture_dimensions | hollow_sphere_dimensions | closed_sphere_dimensions | hollow_cone_dimensions | closed_cone_dimensions | hollow_torus_dimensions | closed_torus_dimensions )
+
+aperture_dimensions :  LBRACE DIMENSIONS COLON LBRACE RADIUS COLON DECIMAL COMMA POSITION_Z COLON DECIMAL RBRACE RBRACE
+
+// Structured Sphere Dimensions
+hollow_sphere_dimensions : LBRACE DIMENSIONS COLON LBRACE OUTER_RADIUS COLON DECIMAL COMMA INNER_RADIUS COLON DECIMAL COMMA START_LATITUDE COLON DECIMAL COMMA END_LATITUDE COLON DECIMAL COMMA SEGMENTS COLON INT COMMA RINGS COLON INT RBRACE RBRACE
+
+closed_sphere_dimensions : LBRACE DIMENSIONS COLON LBRACE OUTER_RADIUS COLON DECIMAL COMMA START_LATITUDE COLON DECIMAL COMMA END_LATITUDE COLON DECIMAL COMMA SEGMENTS COLON INT COMMA RINGS COLON INT RBRACE RBRACE
+
+// Structured Hollow Cone Dimensions (Covers Cylinders when radii are equal)
+hollow_cone_dimensions : LBRACE DIMENSIONS COLON LBRACE OUTER_BOTTOM_RADIUS COLON DECIMAL COMMA OUTER_TOP_RADIUS COLON DECIMAL COMMA HEIGHT COLON DECIMAL COMMA INNER_BOTTOM_RADIUS COLON DECIMAL COMMA INNER_TOP_RADIUS COLON DECIMAL COMMA SEGMENTS COLON INT COMMA RINGS COLON INT RBRACE RBRACE
+
+// Structured Closed Cone Dimensions (Covers Cylinders when radii are equal)
+closed_cone_dimensions : LBRACE DIMENSIONS COLON LBRACE OUTER_BOTTOM_RADIUS COLON DECIMAL COMMA OUTER_TOP_RADIUS COLON DECIMAL COMMA HEIGHT COLON DECIMAL COMMA SEGMENTS COLON INT COMMA RINGS COLON INT RBRACE RBRACE
+
+// Structured Hollow Torus Dimensions
+hollow_torus_dimensions : LBRACE DIMENSIONS COLON LBRACE MAJOR_RADIUS COLON DECIMAL COMMA MINOR_RADIUS COLON DECIMAL COMMA INNER_RADIUS COLON DECIMAL COMMA ARC_DEGREES COLON DECIMAL COMMA MAJOR_SEGMENTS COLON INT COMMA MINOR_SEGMENTS COLON INT RBRACE RBRACE
+
+// Structured Closed Torus Dimensions
+closed_torus_dimensions : LBRACE DIMENSIONS COLON LBRACE MAJOR_RADIUS COLON DECIMAL COMMA MINOR_RADIUS COLON DECIMAL COMMA ARC_DEGREES COLON DECIMAL COMMA MAJOR_SEGMENTS COLON INT COMMA MINOR_SEGMENTS COLON INT RBRACE RBRACE
+
+joint_definition : LBRACE JOINT_KEY COLON LBRACE alignment_properties COMMA kinematic_properties COMMA dynamic_properties RBRACE RBRACE
+
+// --- Alignment Category ---
+alignment_properties : ALIGNMENT_KEY COLON LBRACE SOURCE_FACE_KEY COLON FACE_TAG COMMA TARGET_FACE_KEY COLON FACE_TAG COMMA ALIGN_ALGO_KEY COLON ALIGN_ALGO_VALUE COMMA OFFSET_TRANSFORM_KEY COLON offset_transform RBRACE
+
+// --- Kinematic Category ---
+kinematic_properties : KINEMATIC_KEY COLON LBRACE TYPE_KEY COLON JOINT_TYPE COMMA LIMITS_KEY COLON joint_limits RBRACE
+
+// --- Dynamic Category ---
+dynamic_properties : DYNAMIC_KEY COLON LBRACE MAX_FORCE_KEY COLON DECIMAL COMMA FRICTION_KEY COLON DECIMAL COMMA VELOCITY_LIMIT_KEY COLON DECIMAL COMMA BREAK_TORQUE_KEY COLON DECIMAL COMMA BREAK_FORCE_KEY COLON DECIMAL RBRACE
+
+// --- Supporting Structures ---
+joint_limits : LBRACE LOWER_KEY COLON DECIMAL COMMA UPPER_KEY COLON DECIMAL RBRACE | NULL_VAL
+
+// Decomposed Transform: Individual Keys for every Axis
+offset_transform : LBRACE POS_X COLON DECIMAL COMMA POS_Y COLON DECIMAL COMMA POS_Z COLON DECIMAL COMMA ROLL  COLON DECIMAL COMMA PITCH COLON DECIMAL COMMA YAW   COLON DECIMAL RBRACE
+
+
+
+// 5. Terminal Definitions //
+
+// Keys
+JOINT_KEY           : "\"joint\""
+ALIGNMENT_KEY       : "\"alignment\""
+KINEMATIC_KEY       : "\"kinematic\""
+DYNAMIC_KEY         : "\"dynamic\""
+
+SOURCE_FACE_KEY     : "\"source_face\""
+TARGET_FACE_KEY     : "\"target_face\""
+ALIGN_ALGO_KEY      : "\"alignment_algorithm\""
+OFFSET_TRANSFORM_KEY: "\"offset_transform\""
+
+// Individual Transform Keys
+POS_X : "\"pos_x\""
+POS_Y : "\"pos_y\""
+POS_Z : "\"pos_z\""
+ROLL  : "\"roll\""
+PITCH : "\"pitch\""
+YAW   : "\"yaw\""
+
+TYPE_KEY            : "\"type\""
+LIMITS_KEY          : "\"limits\""
+LOWER_KEY           : "\"lower\""
+UPPER_KEY           : "\"upper\""
+
+MAX_FORCE_KEY       : "\"max_force\""
+FRICTION_KEY        : "\"friction\""
+VELOCITY_LIMIT_KEY  : "\"velocity_limit\""
+BREAK_TORQUE_KEY    : "\"break_torque\""
+BREAK_FORCE_KEY     : "\"break_force\""
+
+// Values
+FACE_TAG            : "\"inside\"" | "\"outside\"" | "\"top_side\"" | "\"bottom_side\""
+ALIGN_ALGO_VALUE    : "\"PYMESH_NORMAL_CENTROID_LOGIC\"" | "\"IDENTITY\""
+JOINT_TYPE          : "\"fixed\"" | "\"revolute\"" | "\"prismatic\"" | "\"spherical\"" | "\"free\""
+NULL_VAL            : "\"null\""
+
+
+
+// New Structured Dimension Terminals
+
+LBRACE: "{"
+RBRACE: "}"
+LBRACK: "["
+RBRACK: "]"
+COLON: ":"
+COMMA: ","
+
+COLOR : "\"RED\"" 
+      | "\"ORANGE\"" 
+      | "\"BROWN\"" 
+      | "\"YELLOW\"" 
+      | "\"GREEN\"" 
+      | "\"BLUE\"" 
+      | "\"WHITE\"" 
+      | "\"GRAY\"" 
+      | "\"BLACK\"" 
+      | "\"VIOLET\"" 
+      | "\"PINK\""
+
+
+MATERIAL : "\"PLASTIC\"" 
+         | "\"WOOD\"" 
+         | "\"GLASS\"" 
+         | "\"STEEL\"" 
+         | "\"CARTOON\"" 
+         | "\"CERAMIC\""
+
+
+OUTER_RADIUS : "\"outer_radius\""
+INNER_RADIUS : "\"inner_radius\""
+START_LATITUDE : "\"start_latitude_deg\""
+END_LATITUDE : "\"end_latitude_deg\""
+SEGMENTS : "\"segments\""
+RINGS : "\"rings\""
+DIMENSIONS : "\"dimensions\""
+OUTER_BOTTOM_RADIUS : "\"outer_bottom_radius\""
+OUTER_TOP_RADIUS : "\"outer_top_radius\""
+HEIGHT : "\"height\""
+INNER_BOTTOM_RADIUS : "\"inner_bottom_radius\""
+INNER_TOP_RADIUS : "\"inner_top_radius\""
+MAJOR_RADIUS : "\"major_radius\""
+MINOR_RADIUS : "\"minor_radius\""
+ARC_DEGREES : "\"arc_degrees\""
+MAJOR_SEGMENTS : "\"major_segments\""
+MINOR_SEGMENTS : "\"minor_segments\""
+RADIUS : "\"radius\""
+POSITION_Z : "\"position_z\""
+
+%import common.ESCAPED_STRING
+%import common.INT
+%import common.FLOAT
+%import common.DECIMAL
+%import common.CR
+%import common.LF
+%import common.NEWLINE
+
+%ignore /\s+/
+%import common.WS
+%ignore WS
+%ignore LF
+%ignore CR
+%ignore NEWLINE
+

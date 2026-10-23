@@ -1,0 +1,37 @@
+%import deep_containers (deep_container, body, aperture, closure, handle, handle_spoon, feet, spout, body_hollow_part,conical_full_hollow_shape, base_shape,support,feet, COMMA, RBRACK, LBRACK, RBRACE, LBRACE, COLON, BODY, HANDLE, APERTURE, SPOUT, FEET, CLOSURE, INT, DECIMAL, TORSO, BASE)
+
+
+// --------------------
+// 1. Top-Level Design Categories as JSON objects
+// --------------------
+
+start: LBRACE FLAT_CONTAINER COLON flat_container RBRACE
+flat_container: plate | spoon
+
+plate: LBRACE PLATE COLON plate_functional_design RBRACE
+spoon: LBRACE SPOON COLON spoon_functional_design RBRACE
+
+
+// --------------------
+// 2. Functional Design Rules
+// --------------------
+
+// Plate: shallow body + full aperture, optional feet
+plate_functional_design: LBRACE PLATE COLON LBRACE SHALLOW_BODY COLON body COMMA FULL_APERTURE COLON aperture RBRACE RBRACE
+
+
+// Spoon: scoop part + base + handle
+spoon_functional_design: LBRACE SPOON COLON LBRACE SPOON_BODY COLON body COMMA HANDLE COLON handle_spoon RBRACE RBRACE
+
+
+// --------------------
+// 3. Terminal Symbols for JSON keys
+// --------------------
+
+PLATE:      "\"plate\""
+SPOON:      "\"spoon\""
+FLAT_CONTAINER: "\"flat_container\""
+SHALLOW_BODY: "\"shallow_body\""
+FULL_APERTURE: "\"full_aperture\""
+SPOON_BODY: "\"spoon_body\""
+

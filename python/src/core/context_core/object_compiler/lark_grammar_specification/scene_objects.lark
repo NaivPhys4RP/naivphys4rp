@@ -1,0 +1,17 @@
+%import generic_supports (start_container,start_support, COMMA, RBRACK, LBRACK, RBRACE, LBRACE, COLON,INT, DECIMAL)
+
+// --------------------
+// Top-Level scene objects
+// --------------------
+start: LBRACE SCENE_OBJECT COLON scene_object RBRACE
+
+scene_object: start_container | start_support
+
+
+// --------------------
+// Terminals
+// --------------------
+SCENE_OBJECT: "\"scene_object\""
+
+
+

@@ -1,0 +1,39 @@
+%import flat_containers (deep_container, flat_container, body, aperture, closure, handle, handle_spoon, feet, spout, body_hollow_part, base_shape, conical_full_hollow_shape,support,feet, COMMA, RBRACK, LBRACK, RBRACE, LBRACE, COLON, BODY, HANDLE, APERTURE, SPOUT, FEET, CLOSURE, INT, DECIMAL, TORSO, BASE)
+
+
+// --------------------
+// 1. Top-Level Design Categories as JSON objects
+// --------------------
+
+start: LBRACE BIG_STORAGE_CONTAINER COLON big_storage_container RBRACE
+big_storage_container: shelf | drawer
+
+shelf: LBRACE SHELF COLON shelf_functional_design RBRACE
+drawer: LBRACE DRAWER COLON drawer_functional_design RBRACE
+
+// --------------------
+// 2. Functional Design Rules
+// --------------------
+
+// Shelf Container: stackable shelf segments, mandatory aperture, optional closure, handles, spouts, feet
+shelf_functional_design: LBRACE SHELF COLON shelf_body RBRACE
+
+// Shelf body: repeated segments of conical hollow part + base
+shelf_body: LBRACK shelf_segment [COMMA shelf_body] RBRACK
+shelf_segment: LBRACE SHELF_SEGMENT COLON LBRACE TORSO COLON conical_full_hollow_shape COMMA BASE COLON base_shape COMMA SHELF_APERTURE COLON aperture RBRACE RBRACE
+
+// Drawer: single conical hollow + base + handle
+drawer_functional_design: LBRACE DRAWER COLON LBRACE TORSO COLON conical_full_hollow_shape COMMA BASE COLON base_shape COMMA HANDLE COLON handle COMMA DRAWER_APERTURE COLON aperture RBRACE RBRACE
+
+// --------------------
+// 3. Terminal Symbols for JSON keys
+// --------------------
+
+BIG_STORAGE_CONTAINER: "\"big_storage_container\""
+SHELF: "\"shelf\""
+DRAWER: "\"drawer\""
+SHELF_BODY: "\"shelf_body\""
+SHELF_SEGMENT: "\"shelf_segment\""
+SHELF_APERTURE: "\"shelf_aperture\""
+DRAWER_APERTURE: "\"shelf_aperture\""
+
