@@ -1,0 +1,20 @@
+task:
+  id: tracy_cube_pick_place_phase1
+  description: Pick a cube and place it at a target pose in MuJoCo.
+  object:
+    name: phase1_cube
+    size_m: [0.04, 0.04, 0.04]
+    mass_kg: 0.08
+  success_criteria:
+    cube_position_tolerance_m: 0.03
+    cube_linear_speed_tolerance_mps: 0.02
+    gripper_released: true
+    remains_at_target_for_s: 2.0
+  # Fill these after inspecting the MuJoCo world frame and table.
+  # Positions are [x, y, z] in metres; orientations are [qx, qy, qz, qw].
+  start_pose: null
+  target_pose: null
+  arm: left
+  notes: >
+    Do not guess coordinates. Calibrate start and target poses against the
+    actual Tracy MuJoCo scene before running the motion.

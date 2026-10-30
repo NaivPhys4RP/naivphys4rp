@@ -1,0 +1,17 @@
+<!--
+Insert this body inside the existing MuJoCo model's <worldbody>.
+Coordinates are intentionally placeholders: choose them only after inspecting
+the current table and robot coordinate frame. `pos` is the cube centre.
+-->
+<body name="phase1_cube" pos="X_START Y_START Z_CENTRE">
+  <freejoint name="phase1_cube_free"/>
+  <geom name="phase1_cube_geom"
+        type="box"
+        size="0.02 0.02 0.02"
+        mass="0.08"
+        rgba="0.85 0.12 0.08 1"
+        friction="1.2 0.01 0.001"
+        condim="4"/>
+  <site name="phase1_cube_site" pos="0 0 0" size="0.004"
+        rgba="1 0.1 0.1 1"/>
+</body>

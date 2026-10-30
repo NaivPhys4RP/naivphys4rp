@@ -1,0 +1,2978 @@
+{
+  "created_at_utc": "2026-10-30T16:50:43.607486+00:00",
+  "model_path": "/home/coco/naivphys4rp/python/src/robauditor/src/tracy_ws/tracy_mjcf/tracy_collision_phase1.xml",
+  "random_seed": 40,
+  "requested_trials": 10,
+  "place_target_center_m": [
+    0.59,
+    0.0,
+    0.897
+  ],
+  "table_bounds_xy_m": {
+    "xmin": 0.0,
+    "xmax": 1.18,
+    "ymin": -0.8,
+    "ymax": 0.8,
+    "table_top_z": 0.855
+  },
+  "execution_mode": "kinematic_attachment_surrogate",
+  "workspace_policy": {
+    "type": "far_side_table_filter",
+    "max_far_side_past_table_center_m": 0.08,
+    "robot_reference_xy_m": [
+      0.135,
+      0.0
+    ],
+    "note": "Conservative geometric filter; it does not certify collision-free motion."
+  },
+  "limitations": [
+    "IK reachability does not certify collision-free paths.",
+    "Workspace-rejected targets are never passed to execute_trial.",
+    "Cube carrying is a kinematic surrogate, not physical gripper dynamics.",
+    "Recovery is recommended but the script does not automatically reposition the cube."
+  ],
+  "trials": [
+    {
+      "trial": 1,
+      "cube_position_m": [
+        0.8428883447911893,
+        0.29399073433885814,
+        0.895
+      ],
+      "place_target_center_m": [
+        0.59,
+        0.0,
+        0.897
+      ],
+      "workspace": {
+        "allowed": true,
+        "reason": "Target is within the approved workspace region.",
+        "far_side_projection_m": 0.2528883447911894,
+        "threshold_m": -0.08,
+        "table_center_xy_m": [
+          0.59,
+          0.0
+        ],
+        "robot_reference_xy_m": [
+          0.135,
+          0.0
+        ]
+      },
+      "workspace_rejected": false,
+      "ik_reachable": true,
+      "reachable": true,
+      "selected_arm": "left",
+      "arms": {
+        "left": {
+          "arm": "left",
+          "reachable": true,
+          "joint_travel_cost_rad": 4.250990219301983,
+          "waypoint_errors": {
+            "pick_approach": {
+              "position_error_m": 0.004807988144919214,
+              "rotation_error_rad": 0.025278497104985465
+            },
+            "pick_grasp": {
+              "position_error_m": 0.005487154193883767,
+              "rotation_error_rad": 0.031288211692745274
+            },
+            "pick_lift": {
+              "position_error_m": 0.0009700132807434265,
+              "rotation_error_rad": 0.005690539704063152
+            },
+            "place_approach": {
+              "position_error_m": 0.006503980423469228,
+              "rotation_error_rad": 0.012267761165585351
+            },
+            "place": {
+              "position_error_m": 0.0053102296670721645,
+              "rotation_error_rad": 0.024187509529263948
+            },
+            "place_retreat": {
+              "position_error_m": 0.00026410582976757355,
+              "rotation_error_rad": 0.00156880954514246
+            }
+          },
+          "solutions": {
+            "pick_approach": [
+              2.6515322891250586,
+              -1.362471477785571,
+              1.9837819933574232,
+              4.727999999999996,
+              5.63264075309891,
+              -0.5645207333811422
+            ],
+            "pick_grasp": [
+              2.8277311886175553,
+              -1.2883263679258818,
+              2.113464046724255,
+              4.3079999999999945,
+              5.717581383861009,
+              -0.29446885732228195
+            ],
+            "pick_lift": [
+              2.6517455899318914,
+              -1.363342924125838,
+              1.985781525880725,
+              4.692999999999996,
+              5.632855335231887,
+              -0.5607498872833115
+            ],
+            "place_approach": [
+              2.1967455899318895,
+              -1.194692242353084,
+              2.3789782572599014,
+              4.459020644916334,
+              5.297967115918464,
+              -1.015749887283312
+            ],
+            "place": [
+              2.3584360404340035,
+              -1.0394337945725962,
+              2.515112721401048,
+              4.109020644916333,
+              5.435122283980135,
+              -0.8848975577572744
+            ],
+            "place_retreat": [
+              2.18319193239507,
+              -1.1940432838683757,
+              2.377977765180825,
+              4.459020644916334,
+              5.298991966325341,
+              -1.0223620170259082
+            ]
+          },
+          "joint_names": [
+            "left_shoulder_pan_joint",
+            "left_shoulder_lift_joint",
+            "left_elbow_joint",
+            "left_wrist_1_joint",
+            "left_wrist_2_joint",
+            "left_wrist_3_joint"
+          ],
+          "qpos_addresses": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "dof_addresses": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "target_rotation": [
+            [
+              -0.195755029213409,
+              -0.97826266045947,
+              0.06842613308099772
+            ],
+            [
+              -0.9805192040485078,
+              0.19640313942085744,
+              0.002810216666612325
+            ],
+            [
+              -0.016188237388285048,
+              -0.06654302349902841,
+              -0.9976522274790296
+            ]
+          ]
+        },
+        "right": {
+          "arm": "right",
+          "reachable": true,
+          "joint_travel_cost_rad": 4.492688304437249,
+          "waypoint_errors": {
+            "pick_approach": {
+              "position_error_m": 0.004216174378086783,
+              "rotation_error_rad": 0.02091008251321986
+            },
+            "pick_grasp": {
+              "position_error_m": 0.003850103425183949,
+              "rotation_error_rad": 0.020442236575662118
+            },
+            "pick_lift": {
+              "position_error_m": 0.0019573717694616227,
+              "rotation_error_rad": 0.010248891230678079
+            },
+            "place_approach": {
+              "position_error_m": 0.0071464710238816655,
+              "rotation_error_rad": 0.019327640792237318
+            },
+            "place": {
+              "position_error_m": 0.0028660205314895476,
+              "rotation_error_rad": 0.014358226349190253
+            },
+            "place_retreat": {
+              "position_error_m": 0.007950214903310465,
+              "rotation_error_rad": 0.03501020209801711
+            }
+          },
+          "solutions": {
+            "pick_approach": [
+              3.9755488714218923,
+              -2.587675861276328,
+              -1.8437263747375554,
+              5.268000000000005,
+              0.7570832660802983,
+              1.124025105646183
+            ],
+            "pick_grasp": [
+              3.848762269408801,
+              -2.708910391305173,
+              -1.9221897711719427,
+              5.583000000000006,
+              0.6796497628594053,
+              0.9716437238392684
+            ],
+            "pick_lift": [
+              3.975495180585121,
+              -2.587367296254362,
+              -1.8457664394329778,
+              5.303000000000005,
+              0.7568207044003238,
+              1.1210252277066932
+            ],
+            "place_approach": [
+              4.161741517159016,
+              -1.9223672962543599,
+              -2.4751286382247586,
+              5.112583816759859,
+              0.8875162009904437,
+              1.3043287237101933
+            ],
+            "place": [
+              3.9816713760819593,
+              -2.110196732330999,
+              -2.6189433990350666,
+              5.567583816759861,
+              0.7611746890876452,
+              1.130521831386111
+            ],
+            "place_retreat": [
+              4.161665380067604,
+              -1.9022921038186473,
+              -2.4749796253810192,
+              5.147583816759859,
+              0.8873429187652337,
+              1.302905093835484
+            ]
+          },
+          "joint_names": [
+            "right_shoulder_pan_joint",
+            "right_shoulder_lift_joint",
+            "right_elbow_joint",
+            "right_wrist_1_joint",
+            "right_wrist_2_joint",
+            "right_wrist_3_joint"
+          ],
+          "qpos_addresses": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "dof_addresses": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "target_rotation": [
+            [
+              -0.09951485465860248,
+              -0.9664478833628753,
+              0.23680220109977201
+            ],
+            [
+              -0.9929106706622819,
+              0.11199571055993325,
+              0.03981659077764929
+            ],
+            [
+              -0.06500149065411008,
+              -0.2311610900640402,
+              -0.9707416528887333
+            ]
+          ]
+        }
+      },
+      "execution": {
+        "executed": true,
+        "execution_mode": "kinematic_attachment_surrogate",
+        "final_cube_center_m": [
+          0.5916477229318754,
+          0.003791817636691768,
+          0.89701155579466
+        ],
+        "place_target_center_m": [
+          0.59,
+          0.0,
+          0.897
+        ],
+        "final_place_error_m": 0.004134368801467175,
+        "placement_within_2cm": true,
+        "arm": "left"
+      },
+      "recovery": null,
+      "status": "executed_success"
+    },
+    {
+      "trial": 2,
+      "cube_position_m": [
+        1.0761131189580408,
+        -0.6693288687319432,
+        0.895
+      ],
+      "place_target_center_m": [
+        0.59,
+        0.0,
+        0.897
+      ],
+      "workspace": {
+        "allowed": true,
+        "reason": "Target is within the approved workspace region.",
+        "far_side_projection_m": 0.4861131189580409,
+        "threshold_m": -0.08,
+        "table_center_xy_m": [
+          0.59,
+          0.0
+        ],
+        "robot_reference_xy_m": [
+          0.135,
+          0.0
+        ]
+      },
+      "workspace_rejected": false,
+      "ik_reachable": true,
+      "reachable": true,
+      "selected_arm": "right",
+      "arms": {
+        "left": {
+          "arm": "left",
+          "reachable": true,
+          "joint_travel_cost_rad": 6.314987689427939,
+          "waypoint_errors": {
+            "pick_approach": {
+              "position_error_m": 0.0003641153444256683,
+              "rotation_error_rad": 0.0014704051880147083
+            },
+            "pick_grasp": {
+              "position_error_m": 0.007803734160948613,
+              "rotation_error_rad": 0.039570898702027485
+            },
+            "pick_lift": {
+              "position_error_m": 0.0031818601992320257,
+              "rotation_error_rad": 0.019809349370063466
+            },
+            "place_approach": {
+              "position_error_m": 0.0004950714633102161,
+              "rotation_error_rad": 0.0003139625417372838
+            },
+            "place": {
+              "position_error_m": 0.005942301683633341,
+              "rotation_error_rad": 0.026992051656786954
+            },
+            "place_retreat": {
+              "position_error_m": 7.290581611654441e-05,
+              "rotation_error_rad": 0.0005809667881688394
+            }
+          },
+          "solutions": {
+            "pick_approach": [
+              2.3717836781151975,
+              0.345328014585151,
+              0.29128722256618633,
+              4.913327637002786,
+              5.445615647325781,
+              -0.87058178318831
+            ],
+            "pick_grasp": [
+              2.461873954532268,
+              0.34157742031293714,
+              0.4892958998807315,
+              4.703327637002785,
+              5.510185873956089,
+              -0.7893456177996968
+            ],
+            "pick_lift": [
+              2.3716748056381154,
+              0.33717032609243625,
+              0.31429589988073137,
+              4.878327637002786,
+              5.44606233609143,
+              -0.8681581988437652
+            ],
+            "place_approach": [
+              2.183282743794523,
+              -1.194561606744274,
+              2.377554831766403,
+              4.462003728801204,
+              5.298801214235536,
+              -1.022891745491404
+            ],
+            "place": [
+              2.3584346235501488,
+              -1.039524508013369,
+              2.515059732546649,
+              4.112003728801203,
+              5.435112655779909,
+              -0.8849497253853787
+            ],
+            "place_retreat": [
+              2.1831915547902954,
+              -1.1939836268458794,
+              2.377968470405767,
+              4.460039383600967,
+              5.298983308770282,
+              -1.0223964719915577
+            ]
+          },
+          "joint_names": [
+            "left_shoulder_pan_joint",
+            "left_shoulder_lift_joint",
+            "left_elbow_joint",
+            "left_wrist_1_joint",
+            "left_wrist_2_joint",
+            "left_wrist_3_joint"
+          ],
+          "qpos_addresses": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "dof_addresses": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "target_rotation": [
+            [
+              -0.195755029213409,
+              -0.97826266045947,
+              0.06842613308099772
+            ],
+            [
+              -0.9805192040485078,
+              0.19640313942085744,
+              0.002810216666612325
+            ],
+            [
+              -0.016188237388285048,
+              -0.06654302349902841,
+              -0.9976522274790296
+            ]
+          ]
+        },
+        "right": {
+          "arm": "right",
+          "reachable": true,
+          "joint_travel_cost_rad": 5.809076578538684,
+          "waypoint_errors": {
+            "pick_approach": {
+              "position_error_m": 0.00012783217093869498,
+              "rotation_error_rad": 0.02988679453960177
+            },
+            "pick_grasp": {
+              "position_error_m": 0.004132962929444363,
+              "rotation_error_rad": 0.023386115217776816
+            },
+            "pick_lift": {
+              "position_error_m": 0.004522845853153529,
+              "rotation_error_rad": 0.02650454177410019
+            },
+            "place_approach": {
+              "position_error_m": 7.935844953171175e-05,
+              "rotation_error_rad": 0.012881643410060992
+            },
+            "place": {
+              "position_error_m": 0.002648704770651874,
+              "rotation_error_rad": 0.013327619081913357
+            },
+            "place_retreat": {
+              "position_error_m": 7.659747375709368e-05,
+              "rotation_error_rad": 0.0007155325359539099
+            }
+          },
+          "solutions": {
+            "pick_approach": [
+              3.3084744074350865,
+              -1.8670910301390289,
+              -1.4129512114545546,
+              5.032726573267669,
+              0.5568781649986247,
+              0.06699999999999978
+            ],
+            "pick_grasp": [
+              3.159472846651285,
+              -1.9363292872818902,
+              -1.4975584835998819,
+              5.382726573267671,
+              0.6007150545031246,
+              -0.2235150789634655
+            ],
+            "pick_lift": [
+              3.308161120514394,
+              -1.8655940107732751,
+              -1.4165761817920965,
+              5.067726573267669,
+              0.5571434794440456,
+              0.030530880013239982
+            ],
+            "place_approach": [
+              4.161480262493364,
+              -1.9035848807747426,
+              -2.474662400218147,
+              5.113694859745121,
+              0.8876433478238387,
+              1.29053088001324
+            ],
+            "place": [
+              3.9816687681100467,
+              -2.110236937430109,
+              -2.618960442048293,
+              5.568694859745123,
+              0.7611696023952798,
+              1.1304913990929069
+            ],
+            "place_retreat": [
+              4.161706696682395,
+              -1.903380607694826,
+              -2.4748169649124065,
+              5.113694859745121,
+              0.8874822223244915,
+              1.3034923689118334
+            ]
+          },
+          "joint_names": [
+            "right_shoulder_pan_joint",
+            "right_shoulder_lift_joint",
+            "right_elbow_joint",
+            "right_wrist_1_joint",
+            "right_wrist_2_joint",
+            "right_wrist_3_joint"
+          ],
+          "qpos_addresses": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "dof_addresses": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "target_rotation": [
+            [
+              -0.09951485465860248,
+              -0.9664478833628753,
+              0.23680220109977201
+            ],
+            [
+              -0.9929106706622819,
+              0.11199571055993325,
+              0.03981659077764929
+            ],
+            [
+              -0.06500149065411008,
+              -0.2311610900640402,
+              -0.9707416528887333
+            ]
+          ]
+        }
+      },
+      "execution": {
+        "executed": true,
+        "execution_mode": "kinematic_attachment_surrogate",
+        "final_cube_center_m": [
+          0.5904812436724631,
+          -0.004573728270693519,
+          0.8974574184236519
+        ],
+        "place_target_center_m": [
+          0.59,
+          0.0,
+          0.897
+        ],
+        "final_place_error_m": 0.004621668246501811,
+        "placement_within_2cm": true,
+        "arm": "right"
+      },
+      "recovery": null,
+      "status": "executed_success"
+    },
+    {
+      "trial": 3,
+      "cube_position_m": [
+        0.7995730677982186,
+        0.6420442289000887,
+        0.895
+      ],
+      "place_target_center_m": [
+        0.59,
+        0.0,
+        0.897
+      ],
+      "workspace": {
+        "allowed": true,
+        "reason": "Target is within the approved workspace region.",
+        "far_side_projection_m": 0.2095730677982186,
+        "threshold_m": -0.08,
+        "table_center_xy_m": [
+          0.59,
+          0.0
+        ],
+        "robot_reference_xy_m": [
+          0.135,
+          0.0
+        ]
+      },
+      "workspace_rejected": false,
+      "ik_reachable": true,
+      "reachable": true,
+      "selected_arm": "right",
+      "arms": {
+        "left": {
+          "arm": "left",
+          "reachable": true,
+          "joint_travel_cost_rad": 5.280895006517663,
+          "waypoint_errors": {
+            "pick_approach": {
+              "position_error_m": 0.0001887244200846507,
+              "rotation_error_rad": 0.035891655219028755
+            },
+            "pick_grasp": {
+              "position_error_m": 0.004891544151006141,
+              "rotation_error_rad": 0.02924663408806015
+            },
+            "pick_lift": {
+              "position_error_m": 0.004789112557686394,
+              "rotation_error_rad": 0.027656576848856643
+            },
+            "place_approach": {
+              "position_error_m": 0.007646994113833304,
+              "rotation_error_rad": 0.01739977413706841
+            },
+            "place": {
+              "position_error_m": 0.005434707815038694,
+              "rotation_error_rad": 0.0247398877819265
+            },
+            "place_retreat": {
+              "position_error_m": 0.00013541595455755824,
+              "rotation_error_rad": 0.0009983835721575076
+            }
+          },
+          "solutions": {
+            "pick_approach": [
+              2.873774278857039,
+              -1.664587765720409,
+              1.793402276311144,
+              4.9041348244021155,
+              5.733947331382996,
+              -0.24799999999999936
+            ],
+            "pick_grasp": [
+              3.0776106644968095,
+              -1.6057763002832808,
+              1.9455796033543717,
+              4.379134824402113,
+              5.763708269577542,
+              0.184338600659809
+            ],
+            "pick_lift": [
+              2.8744607802705993,
+              -1.6665069113204696,
+              1.7956815880433126,
+              4.869134824402115,
+              5.73371577945896,
+              -0.2049340158146125
+            ],
+            "place_approach": [
+              2.182884124664956,
+              -1.21491237139497,
+              2.3793577289652514,
+              4.459607826182279,
+              5.299539080818023,
+              -1.009934015814613
+            ],
+            "place": [
+              2.3584357585560802,
+              -1.0394513402662986,
+              2.5151023472583196,
+              4.109607826182278,
+              5.4351203803268815,
+              -0.8849078488151408
+            ],
+            "place_retreat": [
+              2.1831918570023845,
+              -1.1940312087488296,
+              2.3779760697211265,
+              4.459607826182279,
+              5.298990254796032,
+              -1.02236881243248
+            ]
+          },
+          "joint_names": [
+            "left_shoulder_pan_joint",
+            "left_shoulder_lift_joint",
+            "left_elbow_joint",
+            "left_wrist_1_joint",
+            "left_wrist_2_joint",
+            "left_wrist_3_joint"
+          ],
+          "qpos_addresses": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "dof_addresses": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "target_rotation": [
+            [
+              -0.195755029213409,
+              -0.97826266045947,
+              0.06842613308099772
+            ],
+            [
+              -0.9805192040485078,
+              0.19640313942085744,
+              0.002810216666612325
+            ],
+            [
+              -0.016188237388285048,
+              -0.06654302349902841,
+              -0.9976522274790296
+            ]
+          ]
+        },
+        "right": {
+          "arm": "right",
+          "reachable": true,
+          "joint_travel_cost_rad": 5.051160856548124,
+          "waypoint_errors": {
+            "pick_approach": {
+              "position_error_m": 0.0005514008702423517,
+              "rotation_error_rad": 0.00010189119961794894
+            },
+            "pick_grasp": {
+              "position_error_m": 0.003087293229057401,
+              "rotation_error_rad": 0.015128024941786335
+            },
+            "pick_lift": {
+              "position_error_m": 0.007448094276564172,
+              "rotation_error_rad": 0.03375794584470021
+            },
+            "place_approach": {
+              "position_error_m": 0.00014947042698589295,
+              "rotation_error_rad": 0.00019549932352682295
+            },
+            "place": {
+              "position_error_m": 0.0028410083772516695,
+              "rotation_error_rad": 0.014239630688650943
+            },
+            "place_retreat": {
+              "position_error_m": 0.007980546124477218,
+              "rotation_error_rad": 0.03514168978157736
+            }
+          },
+          "solutions": {
+            "pick_approach": [
+              4.148186154864678,
+              -3.091300763664694,
+              -1.3393733504608791,
+              5.172635091414907,
+              0.8776417498887011,
+              1.2923544596684677
+            ],
+            "pick_grasp": [
+              4.0559146588874855,
+              -3.1909841930726515,
+              -1.4084379434350909,
+              5.382635091414908,
+              0.8113693228200011,
+              1.207620586665557
+            ],
+            "pick_lift": [
+              4.148199249147587,
+              -3.090751627000113,
+              -1.3401301428301218,
+              5.207635091414907,
+              0.8774092653750619,
+              1.2907949416120788
+            ],
+            "place_approach": [
+              4.16174278087602,
+              -1.9037346276284532,
+              -2.47465713477737,
+              5.112711691495594,
+              0.8875584322696207,
+              1.3042473220128856
+            ],
+            "place": [
+              3.981671076350101,
+              -2.110201392923109,
+              -2.6189453606759905,
+              5.567711691495596,
+              0.7611741045406432,
+              1.13051833171213
+            ],
+            "place_retreat": [
+              4.161665218632295,
+              -1.9022866753990806,
+              -2.4749800034446574,
+              5.147711691495594,
+              0.8873423611619391,
+              1.3029028161818101
+            ]
+          },
+          "joint_names": [
+            "right_shoulder_pan_joint",
+            "right_shoulder_lift_joint",
+            "right_elbow_joint",
+            "right_wrist_1_joint",
+            "right_wrist_2_joint",
+            "right_wrist_3_joint"
+          ],
+          "qpos_addresses": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "dof_addresses": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "target_rotation": [
+            [
+              -0.09951485465860248,
+              -0.9664478833628753,
+              0.23680220109977201
+            ],
+            [
+              -0.9929106706622819,
+              0.11199571055993325,
+              0.03981659077764929
+            ],
+            [
+              -0.06500149065411008,
+              -0.2311610900640402,
+              -0.9707416528887333
+            ]
+          ]
+        }
+      },
+      "execution": {
+        "executed": true,
+        "execution_mode": "kinematic_attachment_surrogate",
+        "final_cube_center_m": [
+          0.5899277352878571,
+          0.0003130411220754418,
+          0.8972079493181357
+        ],
+        "place_target_center_m": [
+          0.59,
+          0.0,
+          0.897
+        ],
+        "final_place_error_m": 0.0003827007337913676,
+        "placement_within_2cm": true,
+        "arm": "right"
+      },
+      "recovery": null,
+      "status": "executed_success"
+    },
+    {
+      "trial": 4,
+      "cube_position_m": [
+        0.5632514952730721,
+        -0.24564614970109244,
+        0.895
+      ],
+      "place_target_center_m": [
+        0.59,
+        0.0,
+        0.897
+      ],
+      "workspace": {
+        "allowed": true,
+        "reason": "Target is within the approved workspace region.",
+        "far_side_projection_m": -0.026748504726927913,
+        "threshold_m": -0.08,
+        "table_center_xy_m": [
+          0.59,
+          0.0
+        ],
+        "robot_reference_xy_m": [
+          0.135,
+          0.0
+        ]
+      },
+      "workspace_rejected": false,
+      "ik_reachable": true,
+      "reachable": true,
+      "selected_arm": "left",
+      "arms": {
+        "left": {
+          "arm": "left",
+          "reachable": true,
+          "joint_travel_cost_rad": 4.09795672584508,
+          "waypoint_errors": {
+            "pick_approach": {
+              "position_error_m": 0.007693409105372578,
+              "rotation_error_rad": 0.03049097339487074
+            },
+            "pick_grasp": {
+              "position_error_m": 0.007654210021949952,
+              "rotation_error_rad": 0.03192870430083743
+            },
+            "pick_lift": {
+              "position_error_m": 0.00046148441237294456,
+              "rotation_error_rad": 0.0024928553617974505
+            },
+            "place_approach": {
+              "position_error_m": 0.0001114751034957971,
+              "rotation_error_rad": 0.00020703820383734443
+            },
+            "place": {
+              "position_error_m": 0.005683806439041523,
+              "rotation_error_rad": 0.025845184552001892
+            },
+            "place_retreat": {
+              "position_error_m": 8.077237736618499e-05,
+              "rotation_error_rad": 0.0006024656668159401
+            }
+          },
+          "solutions": {
+            "pick_approach": [
+              2.027532919048982,
+              -0.7115493841654875,
+              2.2007045443128135,
+              4.237999999999994,
+              5.171219073453491,
+              -1.1266326916354727
+            ],
+            "pick_grasp": [
+              2.1487609000405214,
+              -0.536890883125061,
+              2.3041229433763966,
+              3.922999999999993,
+              5.270866464896749,
+              -1.0478986888390223
+            ],
+            "pick_lift": [
+              2.0274141933253267,
+              -0.7113959883915497,
+              2.2022013878545277,
+              4.202999999999994,
+              5.171444162727861,
+              -1.1257395003563955
+            ],
+            "place_approach": [
+              2.183197195920627,
+              -1.1936495044088193,
+              2.3778257845723987,
+              4.460783287980533,
+              5.29891054130186,
+              -1.0229165367296487
+            ],
+            "place": [
+              2.3584351982559717,
+              -1.0394869159998046,
+              2.5150814985560572,
+              4.1107832879805315,
+              5.435116582237835,
+              -0.884928416327139
+            ],
+            "place_retreat": [
+              2.183191707643599,
+              -1.1940075262164431,
+              2.3779724783390863,
+              4.460033724802109,
+              5.298986839443124,
+              -1.022382396234781
+            ]
+          },
+          "joint_names": [
+            "left_shoulder_pan_joint",
+            "left_shoulder_lift_joint",
+            "left_elbow_joint",
+            "left_wrist_1_joint",
+            "left_wrist_2_joint",
+            "left_wrist_3_joint"
+          ],
+          "qpos_addresses": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "dof_addresses": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "target_rotation": [
+            [
+              -0.195755029213409,
+              -0.97826266045947,
+              0.06842613308099772
+            ],
+            [
+              -0.9805192040485078,
+              0.19640313942085744,
+              0.002810216666612325
+            ],
+            [
+              -0.016188237388285048,
+              -0.06654302349902841,
+              -0.9976522274790296
+            ]
+          ]
+        },
+        "right": {
+          "arm": "right",
+          "reachable": true,
+          "joint_travel_cost_rad": 4.797794384870599,
+          "waypoint_errors": {
+            "pick_approach": {
+              "position_error_m": 0.0030701115138026406,
+              "rotation_error_rad": 0.004128092073282014
+            },
+            "pick_grasp": {
+              "position_error_m": 0.005200637832548827,
+              "rotation_error_rad": 0.026995823973503922
+            },
+            "pick_lift": {
+              "position_error_m": 0.007293845100597734,
+              "rotation_error_rad": 0.03320132974881524
+            },
+            "place_approach": {
+              "position_error_m": 0.00014614769409628973,
+              "rotation_error_rad": 0.00017742328906867255
+            },
+            "place": {
+              "position_error_m": 0.0027922475927649676,
+              "rotation_error_rad": 0.014008413969492615
+            },
+            "place_retreat": {
+              "position_error_m": 7.283792686639919e-05,
+              "rotation_error_rad": 0.0006846185761822764
+            }
+          },
+          "solutions": {
+            "pick_approach": [
+              4.043909764381978,
+              -1.2834635398897822,
+              -2.4960000000000004,
+              4.590925327980891,
+              0.8031771462642928,
+              1.194557154580187
+            ],
+            "pick_grasp": [
+              3.776408076744442,
+              -1.364118232228132,
+              -2.6921903680917367,
+              5.080925327980893,
+              0.6410399798193588,
+              0.8712300612206132
+            ],
+            "pick_lift": [
+              4.04343846632725,
+              -1.2840396520969948,
+              -2.5001887759993964,
+              4.625925327980891,
+              0.8028351017078774,
+              1.192882828449476
+            ],
+            "place_approach": [
+              4.161764839633566,
+              -1.9034206879434767,
+              -2.4747610245335414,
+              5.11296098131506,
+              0.8876427759757514,
+              1.3039643691095277
+            ],
+            "place": [
+              3.9816704917058297,
+              -2.1102104538751902,
+              -2.6189491847942397,
+              5.5679609813150615,
+              0.7611729643045044,
+              1.130511506972562
+            ],
+            "place_retreat": [
+              4.161707557798005,
+              -1.9033967452124196,
+              -2.4748119745282535,
+              5.1136657171738165,
+              0.8874850564240907,
+              1.3035047280532641
+            ]
+          },
+          "joint_names": [
+            "right_shoulder_pan_joint",
+            "right_shoulder_lift_joint",
+            "right_elbow_joint",
+            "right_wrist_1_joint",
+            "right_wrist_2_joint",
+            "right_wrist_3_joint"
+          ],
+          "qpos_addresses": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "dof_addresses": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "target_rotation": [
+            [
+              -0.09951485465860248,
+              -0.9664478833628753,
+              0.23680220109977201
+            ],
+            [
+              -0.9929106706622819,
+              0.11199571055993325,
+              0.03981659077764929
+            ],
+            [
+              -0.06500149065411008,
+              -0.2311610900640402,
+              -0.9707416528887333
+            ]
+          ]
+        }
+      },
+      "execution": {
+        "executed": true,
+        "execution_mode": "kinematic_attachment_surrogate",
+        "final_cube_center_m": [
+          0.5898379503810262,
+          -0.0024176971259577402,
+          0.897711252121387
+        ],
+        "place_target_center_m": [
+          0.59,
+          0.0,
+          0.897
+        ],
+        "final_place_error_m": 0.0025253512730017175,
+        "placement_within_2cm": true,
+        "arm": "left"
+      },
+      "recovery": null,
+      "status": "executed_success"
+    },
+    {
+      "trial": 5,
+      "cube_position_m": [
+        0.7020710857972723,
+        0.35055419449699987,
+        0.895
+      ],
+      "place_target_center_m": [
+        0.59,
+        0.0,
+        0.897
+      ],
+      "workspace": {
+        "allowed": true,
+        "reason": "Target is within the approved workspace region.",
+        "far_side_projection_m": 0.11207108579727232,
+        "threshold_m": -0.08,
+        "table_center_xy_m": [
+          0.59,
+          0.0
+        ],
+        "robot_reference_xy_m": [
+          0.135,
+          0.0
+        ]
+      },
+      "workspace_rejected": false,
+      "ik_reachable": true,
+      "reachable": true,
+      "selected_arm": "left",
+      "arms": {
+        "left": {
+          "arm": "left",
+          "reachable": true,
+          "joint_travel_cost_rad": 4.385621867431267,
+          "waypoint_errors": {
+            "pick_approach": {
+              "position_error_m": 0.0003486841493969688,
+              "rotation_error_rad": 0.00029611234548236593
+            },
+            "pick_grasp": {
+              "position_error_m": 0.0036440304241579283,
+              "rotation_error_rad": 0.02055141885426298
+            },
+            "pick_lift": {
+              "position_error_m": 0.006654299779077121,
+              "rotation_error_rad": 0.033286391764580536
+            },
+            "place_approach": {
+              "position_error_m": 0.0002532190677917467,
+              "rotation_error_rad": 0.0002528632786931588
+            },
+            "place": {
+              "position_error_m": 0.005600872517620765,
+              "rotation_error_rad": 0.025477204720537838
+            },
+            "place_retreat": {
+              "position_error_m": 8.338070006660585e-05,
+              "rotation_error_rad": 0.0006093709302726862
+            }
+          },
+          "solutions": {
+            "pick_approach": [
+              2.5760627701126744,
+              -1.646726355625973,
+              2.175123513480238,
+              4.869917332313368,
+              5.5868982130676095,
+              -0.6592910649712641
+            ],
+            "pick_grasp": [
+              2.7960286214010903,
+              -1.5787035445426525,
+              2.330616467257776,
+              4.414917332313366,
+              5.705028960245109,
+              -0.3473171441603957
+            ],
+            "pick_lift": [
+              2.5762614685648204,
+              -1.6473557749298895,
+              2.175548350230574,
+              4.834917332313368,
+              5.587217475566375,
+              -0.656968572412634
+            ],
+            "place_approach": [
+              2.183162260554789,
+              -1.194202554516445,
+              2.3782325084769633,
+              4.460391866935495,
+              5.298879785179004,
+              -1.0226380880217885
+            ],
+            "place": [
+              2.3584353840697423,
+              -1.039475000041959,
+              2.5150884537228264,
+              4.110391866935494,
+              5.435117845140282,
+              -0.884921572231455
+            ],
+            "place_retreat": [
+              2.183191757146486,
+              -1.1940153398447235,
+              2.3779737035015303,
+              4.460032106842785,
+              5.298987975118587,
+              -1.0223778758398498
+            ]
+          },
+          "joint_names": [
+            "left_shoulder_pan_joint",
+            "left_shoulder_lift_joint",
+            "left_elbow_joint",
+            "left_wrist_1_joint",
+            "left_wrist_2_joint",
+            "left_wrist_3_joint"
+          ],
+          "qpos_addresses": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "dof_addresses": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "target_rotation": [
+            [
+              -0.195755029213409,
+              -0.97826266045947,
+              0.06842613308099772
+            ],
+            [
+              -0.9805192040485078,
+              0.19640313942085744,
+              0.002810216666612325
+            ],
+            [
+              -0.016188237388285048,
+              -0.06654302349902841,
+              -0.9976522274790296
+            ]
+          ]
+        },
+        "right": {
+          "arm": "right",
+          "reachable": true,
+          "joint_travel_cost_rad": 4.455331555016879,
+          "waypoint_errors": {
+            "pick_approach": {
+              "position_error_m": 0.00043042391876777663,
+              "rotation_error_rad": 0.0025881489624510227
+            },
+            "pick_grasp": {
+              "position_error_m": 0.005157349249310423,
+              "rotation_error_rad": 0.024797616410655882
+            },
+            "pick_lift": {
+              "position_error_m": 0.006696607527388882,
+              "rotation_error_rad": 0.03019461697887799
+            },
+            "place_approach": {
+              "position_error_m": 0.007937556868496357,
+              "rotation_error_rad": 0.02181866312287325
+            },
+            "place": {
+              "position_error_m": 0.0029549935993140315,
+              "rotation_error_rad": 0.014780049967179841
+            },
+            "place_retreat": {
+              "position_error_m": 0.007842340473590672,
+              "rotation_error_rad": 0.034542566586783244
+            }
+          },
+          "solutions": {
+            "pick_approach": [
+              4.154781110166981,
+              -2.6254334418010608,
+              -1.977175255010352,
+              5.338000000000005,
+              0.8825384140679307,
+              1.2988030352125957
+            ],
+            "pick_grasp": [
+              4.036030665327396,
+              -2.7729610581532573,
+              -2.0578977042352564,
+              5.6180000000000065,
+              0.7976603610526426,
+              1.1879882743384511
+            ],
+            "pick_lift": [
+              4.15478775021377,
+              -2.624510693598845,
+              -1.9790905501537575,
+              5.3730000000000055,
+              0.8822446108167628,
+              1.2967406746380692
+            ],
+            "place_approach": [
+              4.161746684181089,
+              -1.9245106935988427,
+              -2.47507963469711,
+              5.112128938203848,
+              0.8875229586324529,
+              1.3044218713376914
+            ],
+            "place": [
+              3.98167244138169,
+              -2.1101800835051927,
+              -2.618936420816914,
+              5.56712893820385,
+              0.7611767665317207,
+              1.1305342743734095
+            ],
+            "place_retreat": [
+              4.161665954004707,
+              -1.902311330508322,
+              -2.474978267107048,
+              5.147128938203848,
+              0.8873449002925351,
+              1.302913192178254
+            ]
+          },
+          "joint_names": [
+            "right_shoulder_pan_joint",
+            "right_shoulder_lift_joint",
+            "right_elbow_joint",
+            "right_wrist_1_joint",
+            "right_wrist_2_joint",
+            "right_wrist_3_joint"
+          ],
+          "qpos_addresses": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "dof_addresses": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "target_rotation": [
+            [
+              -0.09951485465860248,
+              -0.9664478833628753,
+              0.23680220109977201
+            ],
+            [
+              -0.9929106706622819,
+              0.11199571055993325,
+              0.03981659077764929
+            ],
+            [
+              -0.06500149065411008,
+              -0.2311610900640402,
+              -0.9707416528887333
+            ]
+          ]
+        }
+      },
+      "execution": {
+        "executed": true,
+        "execution_mode": "kinematic_attachment_surrogate",
+        "final_cube_center_m": [
+          0.589757968056034,
+          0.0036558411402135265,
+          0.8961975892604365
+        ],
+        "place_target_center_m": [
+          0.59,
+          0.0,
+          0.897
+        ],
+        "final_place_error_m": 0.0037506821911946395,
+        "placement_within_2cm": true,
+        "arm": "left"
+      },
+      "recovery": null,
+      "status": "executed_success"
+    },
+    {
+      "trial": 6,
+      "cube_position_m": [
+        0.16348885391205942,
+        -0.5948850147674987,
+        0.895
+      ],
+      "place_target_center_m": [
+        0.59,
+        0.0,
+        0.897
+      ],
+      "workspace": {
+        "allowed": false,
+        "reason": "Target is too far beyond the table centre on the side away from the robot.",
+        "far_side_projection_m": -0.42651114608794055,
+        "threshold_m": -0.08,
+        "table_center_xy_m": [
+          0.59,
+          0.0
+        ],
+        "robot_reference_xy_m": [
+          0.135,
+          0.0
+        ]
+      },
+      "workspace_rejected": true,
+      "ik_reachable": true,
+      "reachable": false,
+      "selected_arm": null,
+      "arms": {
+        "left": {
+          "arm": "left",
+          "reachable": true,
+          "joint_travel_cost_rad": 5.698197379862727,
+          "waypoint_errors": {
+            "pick_approach": {
+              "position_error_m": 0.0004458600890701101,
+              "rotation_error_rad": 0.00015490369102156383
+            },
+            "pick_grasp": {
+              "position_error_m": 0.006655550242939684,
+              "rotation_error_rad": 0.025199965440228397
+            },
+            "pick_lift": {
+              "position_error_m": 0.00013952551168156202,
+              "rotation_error_rad": 0.0007099125605512422
+            },
+            "place_approach": {
+              "position_error_m": 0.007060085930397714,
+              "rotation_error_rad": 0.01860198733287833
+            },
+            "place": {
+              "position_error_m": 0.005764908589327723,
+              "rotation_error_rad": 0.026205024049392074
+            },
+            "place_retreat": {
+              "position_error_m": 7.826130684863931e-05,
+              "rotation_error_rad": 0.0005957165521026941
+            }
+          },
+          "solutions": {
+            "pick_approach": [
+              1.3010929438855672,
+              -0.16124987554084488,
+              1.864257284156579,
+              4.052681247830804,
+              4.547021872042741,
+              -1.5081346819478363
+            ],
+            "pick_grasp": [
+              1.225909961646973,
+              0.026682558340660995,
+              1.939109566344478,
+              3.8076812478308026,
+              4.482017715319568,
+              -1.5466477272866135
+            ],
+            "pick_lift": [
+              1.3010390216834842,
+              -0.16100971754640972,
+              1.8638391629614306,
+              4.052292858508526,
+              4.547009160943727,
+              -1.5082559668909303
+            ],
+            "place_approach": [
+              2.1832031353293786,
+              -1.17600971754641,
+              2.3783011605462985,
+              4.461166127448525,
+              5.298931303825784,
+              -1.0230402234152018
+            ],
+            "place": [
+              2.35843501724226,
+              -1.0394986366168877,
+              2.5150746839122977,
+              4.111166127448524,
+              5.43511534863217,
+              -0.8849351056922939
+            ],
+            "place_retreat": [
+              2.1831916594511225,
+              -1.1939999537831958,
+              2.3779712517428644,
+              4.460035399865818,
+              5.2989857302243735,
+              -1.0223868147026953
+            ]
+          },
+          "joint_names": [
+            "left_shoulder_pan_joint",
+            "left_shoulder_lift_joint",
+            "left_elbow_joint",
+            "left_wrist_1_joint",
+            "left_wrist_2_joint",
+            "left_wrist_3_joint"
+          ],
+          "qpos_addresses": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "dof_addresses": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "target_rotation": [
+            [
+              -0.195755029213409,
+              -0.97826266045947,
+              0.06842613308099772
+            ],
+            [
+              -0.9805192040485078,
+              0.19640313942085744,
+              0.002810216666612325
+            ],
+            [
+              -0.016188237388285048,
+              -0.06654302349902841,
+              -0.9976522274790296
+            ]
+          ]
+        },
+        "right": {
+          "arm": "right",
+          "reachable": false,
+          "joint_travel_cost_rad": 7.423636587626373,
+          "waypoint_errors": {
+            "pick_approach": {
+              "position_error_m": 0.13353949635353798,
+              "rotation_error_rad": 0.29828019979919035
+            },
+            "pick_grasp": {
+              "position_error_m": 0.21835811262450036,
+              "rotation_error_rad": 0.3653702853975669
+            },
+            "pick_lift": {
+              "position_error_m": 0.11133869323134868,
+              "rotation_error_rad": 0.36949353274876906
+            },
+            "place_approach": {
+              "position_error_m": 0.005096979019891469,
+              "rotation_error_rad": 0.022441210733185956
+            },
+            "place": {
+              "position_error_m": 0.007582587219282786,
+              "rotation_error_rad": 0.03667550891549184
+            },
+            "place_retreat": {
+              "position_error_m": 0.002254738409545734,
+              "rotation_error_rad": 0.010335899770602789
+            }
+          },
+          "solutions": {
+            "pick_approach": [
+              5.439000000000005,
+              -0.4243196341511911,
+              -2.195204292877293,
+              3.1451329597213222,
+              2.213382994273214,
+              2.1555050093025727
+            ],
+            "pick_grasp": [
+              5.3033332090508924,
+              -0.39877002892068036,
+              -2.3284917423796423,
+              3.1058792470668006,
+              2.143382994273214,
+              2.000873814538401
+            ],
+            "pick_lift": [
+              5.233333209050892,
+              -0.4569386434887791,
+              -2.18198896800653,
+              3.16338181295494,
+              2.143382994273214,
+              1.9401948739886854
+            ],
+            "place_approach": [
+              4.161816807246174,
+              -1.9032601737075527,
+              -2.4735715842836257,
+              5.088381812954948,
+              0.8877794544967308,
+              1.305015363794759
+            ],
+            "place": [
+              3.9817260537574124,
+              -2.109161589108945,
+              -2.6185702801603066,
+              5.54338181295495,
+              0.761281137785441,
+              1.131170578345074
+            ],
+            "place_retreat": [
+              4.161695193216529,
+              -1.903138836307884,
+              -2.4748767588005287,
+              5.123381812954948,
+              0.8874440990321675,
+              1.303327813382419
+            ]
+          },
+          "joint_names": [
+            "right_shoulder_pan_joint",
+            "right_shoulder_lift_joint",
+            "right_elbow_joint",
+            "right_wrist_1_joint",
+            "right_wrist_2_joint",
+            "right_wrist_3_joint"
+          ],
+          "qpos_addresses": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "dof_addresses": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "target_rotation": [
+            [
+              -0.09951485465860248,
+              -0.9664478833628753,
+              0.23680220109977201
+            ],
+            [
+              -0.9929106706622819,
+              0.11199571055993325,
+              0.03981659077764929
+            ],
+            [
+              -0.06500149065411008,
+              -0.2311610900640402,
+              -0.9707416528887333
+            ]
+          ]
+        }
+      },
+      "execution": {
+        "executed": false
+      },
+      "recovery": {
+        "strategy": "CHANGE_OBJECT_POSITION",
+        "reason": "Target is too far beyond the table centre on the side away from the robot.",
+        "action": "Do not execute. Reposition or resample the cube within the approved workspace and validate again.",
+        "automatic_reposition_performed": false
+      },
+      "status": "workspace_rejected_recovery_recommended"
+    },
+    {
+      "trial": 7,
+      "cube_position_m": [
+        0.7409874166447594,
+        -0.6956603434381652,
+        0.895
+      ],
+      "place_target_center_m": [
+        0.59,
+        0.0,
+        0.897
+      ],
+      "workspace": {
+        "allowed": true,
+        "reason": "Target is within the approved workspace region.",
+        "far_side_projection_m": 0.15098741664475945,
+        "threshold_m": -0.08,
+        "table_center_xy_m": [
+          0.59,
+          0.0
+        ],
+        "robot_reference_xy_m": [
+          0.135,
+          0.0
+        ]
+      },
+      "workspace_rejected": false,
+      "ik_reachable": true,
+      "reachable": true,
+      "selected_arm": "left",
+      "arms": {
+        "left": {
+          "arm": "left",
+          "reachable": true,
+          "joint_travel_cost_rad": 4.951595325762077,
+          "waypoint_errors": {
+            "pick_approach": {
+              "position_error_m": 0.0002642225365743713,
+              "rotation_error_rad": 0.00022304948844645222
+            },
+            "pick_grasp": {
+              "position_error_m": 0.005176080616399533,
+              "rotation_error_rad": 0.022369166042691804
+            },
+            "pick_lift": {
+              "position_error_m": 0.00013930609386663564,
+              "rotation_error_rad": 0.0008470929964181909
+            },
+            "place_approach": {
+              "position_error_m": 0.0017235966985100018,
+              "rotation_error_rad": 0.004486190857255928
+            },
+            "place": {
+              "position_error_m": 0.005681906576316134,
+              "rotation_error_rad": 0.025836754854859582
+            },
+            "place_retreat": {
+              "position_error_m": 8.08316762858541e-05,
+              "rotation_error_rad": 0.0006026238264849712
+            }
+          },
+          "solutions": {
+            "pick_approach": [
+              2.097245751475791,
+              0.0354985651655602,
+              1.1966304623981985,
+              4.443205708981905,
+              5.229085518999981,
+              -1.0815255478877908
+            ],
+            "pick_grasp": [
+              2.1822859153435283,
+              0.12239166374979851,
+              1.277346234783564,
+              4.268205708981904,
+              5.298064301955446,
+              -1.0243629990710237
+            ],
+            "pick_lift": [
+              2.097230107578839,
+              0.03545661927266148,
+              1.1966383283568631,
+              4.44253364750116,
+              5.229161671809923,
+              -1.081182210884749
+            ],
+            "place_approach": [
+              2.1832006541307183,
+              -1.1895433807273388,
+              2.3780554634961177,
+              4.460774319666488,
+              5.298924191069274,
+              -1.0229417340074645
+            ],
+            "place": [
+              2.3584352025000124,
+              -1.0394866417024202,
+              2.5150816582071953,
+              4.110774319666486,
+              5.435116611085777,
+              -0.884928259539855
+            ],
+            "place_retreat": [
+              2.1831917087752153,
+              -1.194007704434695,
+              2.3779725067375415,
+              4.460033686659593,
+              5.298986865445905,
+              -1.0223822926952735
+            ]
+          },
+          "joint_names": [
+            "left_shoulder_pan_joint",
+            "left_shoulder_lift_joint",
+            "left_elbow_joint",
+            "left_wrist_1_joint",
+            "left_wrist_2_joint",
+            "left_wrist_3_joint"
+          ],
+          "qpos_addresses": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "dof_addresses": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "target_rotation": [
+            [
+              -0.195755029213409,
+              -0.97826266045947,
+              0.06842613308099772
+            ],
+            [
+              -0.9805192040485078,
+              0.19640313942085744,
+              0.002810216666612325
+            ],
+            [
+              -0.016188237388285048,
+              -0.06654302349902841,
+              -0.9976522274790296
+            ]
+          ]
+        },
+        "right": {
+          "arm": "right",
+          "reachable": true,
+          "joint_travel_cost_rad": 6.138034372927042,
+          "waypoint_errors": {
+            "pick_approach": {
+              "position_error_m": 0.00017546486695975118,
+              "rotation_error_rad": 0.01581775739681839
+            },
+            "pick_grasp": {
+              "position_error_m": 0.0015961389795201423,
+              "rotation_error_rad": 0.009504121629234741
+            },
+            "pick_lift": {
+              "position_error_m": 0.004705578199143219,
+              "rotation_error_rad": 0.02737955033910807
+            },
+            "place_approach": {
+              "position_error_m": 0.00011422277214637907,
+              "rotation_error_rad": 0.034078505133595206
+            },
+            "place": {
+              "position_error_m": 0.0025833580746351843,
+              "rotation_error_rad": 0.013017619952666598
+            },
+            "place_retreat": {
+              "position_error_m": 0.00010735794028365478,
+              "rotation_error_rad": 0.00100056528752418
+            }
+          },
+          "solutions": {
+            "pick_approach": [
+              3.390069397902758,
+              -1.286182366146635,
+              -1.9300212794776659,
+              4.837803882127271,
+              0.5470929496861471,
+              0.2069999999999998
+            ],
+            "pick_grasp": [
+              3.146329139165547,
+              -1.3901472160918198,
+              -2.061799714731862,
+              5.432803882127273,
+              0.6059522985596286,
+              -0.2455067625873135
+            ],
+            "pick_lift": [
+              3.3891642311366037,
+              -1.284750682306706,
+              -1.9323463898334663,
+              4.872803882127271,
+              0.5475959803364006,
+              0.18404567026686763
+            ],
+            "place_approach": [
+              4.161370486374224,
+              -1.9034835469510094,
+              -2.4747377128063777,
+              5.114028968532326,
+              0.8876437041937955,
+              1.2690456702668678
+            ],
+            "place": [
+              3.9816679821951957,
+              -2.1102489000262445,
+              -2.618965566886024,
+              5.5690289685323275,
+              0.7611680692655962,
+              1.130482236436418
+            ],
+            "place_retreat": [
+              4.161706304158271,
+              -1.903373160211833,
+              -2.4748192150485786,
+              5.114028968532326,
+              0.8874809295505108,
+              1.30348673722216
+            ]
+          },
+          "joint_names": [
+            "right_shoulder_pan_joint",
+            "right_shoulder_lift_joint",
+            "right_elbow_joint",
+            "right_wrist_1_joint",
+            "right_wrist_2_joint",
+            "right_wrist_3_joint"
+          ],
+          "qpos_addresses": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "dof_addresses": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "target_rotation": [
+            [
+              -0.09951485465860248,
+              -0.9664478833628753,
+              0.23680220109977201
+            ],
+            [
+              -0.9929106706622819,
+              0.11199571055993325,
+              0.03981659077764929
+            ],
+            [
+              -0.06500149065411008,
+              -0.2311610900640402,
+              -0.9707416528887333
+            ]
+          ]
+        }
+      },
+      "execution": {
+        "executed": true,
+        "execution_mode": "kinematic_attachment_surrogate",
+        "final_cube_center_m": [
+          0.5888478976327219,
+          -0.00029343749254993586,
+          0.8968711861140136
+        ],
+        "place_target_center_m": [
+          0.59,
+          0.0,
+          0.897
+        ],
+        "final_place_error_m": 0.0011958421484228388,
+        "placement_within_2cm": true,
+        "arm": "left"
+      },
+      "recovery": null,
+      "status": "executed_success"
+    },
+    {
+      "trial": 8,
+      "cube_position_m": [
+        0.09248472410875061,
+        -0.27470658643184687,
+        0.895
+      ],
+      "place_target_center_m": [
+        0.59,
+        0.0,
+        0.897
+      ],
+      "workspace": {
+        "allowed": false,
+        "reason": "Target is too far beyond the table centre on the side away from the robot.",
+        "far_side_projection_m": -0.49751527589124933,
+        "threshold_m": -0.08,
+        "table_center_xy_m": [
+          0.59,
+          0.0
+        ],
+        "robot_reference_xy_m": [
+          0.135,
+          0.0
+        ]
+      },
+      "workspace_rejected": true,
+      "ik_reachable": true,
+      "reachable": false,
+      "selected_arm": null,
+      "arms": {
+        "left": {
+          "arm": "left",
+          "reachable": true,
+          "joint_travel_cost_rad": 6.834910319332236,
+          "waypoint_errors": {
+            "pick_approach": {
+              "position_error_m": 0.0007217630985839444,
+              "rotation_error_rad": 0.0014104087655804618
+            },
+            "pick_grasp": {
+              "position_error_m": 0.007243676751922711,
+              "rotation_error_rad": 0.030803097971508448
+            },
+            "pick_lift": {
+              "position_error_m": 0.00010958206416188973,
+              "rotation_error_rad": 0.0006997815318403344
+            },
+            "place_approach": {
+              "position_error_m": 0.005932350076771654,
+              "rotation_error_rad": 0.012970674951656753
+            },
+            "place": {
+              "position_error_m": 0.005592158962669795,
+              "rotation_error_rad": 0.025438531373549133
+            },
+            "place_retreat": {
+              "position_error_m": 8.365709296099864e-05,
+              "rotation_error_rad": 0.0006100965774314919
+            }
+          },
+          "solutions": {
+            "pick_approach": [
+              1.0497315882627305,
+              -0.6342996756934541,
+              2.439749351140849,
+              3.9122455877135924,
+              4.33186119077413,
+              -1.6433858207486907
+            ],
+            "pick_grasp": [
+              0.833566867428991,
+              -0.25262065875686635,
+              2.5540406127500233,
+              3.3872455877135903,
+              4.1520704888183095,
+              -1.7779760363707116
+            ],
+            "pick_lift": [
+              1.0495901037431128,
+              -0.6326670058106388,
+              2.4396406861057574,
+              3.911368086881273,
+              4.331741571991167,
+              -1.6436961819627771
+            ],
+            "place_approach": [
+              2.1695901037431113,
+              -1.194094767257334,
+              2.3787741983819486,
+              4.460350750209898,
+              5.298493060535482,
+              -1.023404864965753
+            ],
+            "place": [
+              2.35843540825796,
+              -1.0394737645201677,
+              2.5150891818533276,
+              4.110350750209896,
+              5.435117973723802,
+              -0.8849208543126954
+            ],
+            "place_retreat": [
+              2.1831917623599963,
+              -1.1940161648228076,
+              2.3779738305019533,
+              4.460031942442141,
+              5.2989880945088546,
+              -1.022377400826801
+            ]
+          },
+          "joint_names": [
+            "left_shoulder_pan_joint",
+            "left_shoulder_lift_joint",
+            "left_elbow_joint",
+            "left_wrist_1_joint",
+            "left_wrist_2_joint",
+            "left_wrist_3_joint"
+          ],
+          "qpos_addresses": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "dof_addresses": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "target_rotation": [
+            [
+              -0.195755029213409,
+              -0.97826266045947,
+              0.06842613308099772
+            ],
+            [
+              -0.9805192040485078,
+              0.19640313942085744,
+              0.002810216666612325
+            ],
+            [
+              -0.016188237388285048,
+              -0.06654302349902841,
+              -0.9976522274790296
+            ]
+          ]
+        },
+        "right": {
+          "arm": "right",
+          "reachable": false,
+          "joint_travel_cost_rad": 11.8911399082826,
+          "waypoint_errors": {
+            "pick_approach": {
+              "position_error_m": 0.003324186227658821,
+              "rotation_error_rad": 0.04873223610857707
+            },
+            "pick_grasp": {
+              "position_error_m": 0.12696378375283074,
+              "rotation_error_rad": 0.5884111680883399
+            },
+            "pick_lift": {
+              "position_error_m": 0.003324186227658938,
+              "rotation_error_rad": 0.048732236108575855
+            },
+            "place_approach": {
+              "position_error_m": 0.0001790444609679458,
+              "rotation_error_rad": 0.0001771925009111125
+            },
+            "place": {
+              "position_error_m": 0.0027898663104207974,
+              "rotation_error_rad": 0.013997121697383777
+            },
+            "place_retreat": {
+              "position_error_m": 7.290634106941522e-05,
+              "rotation_error_rad": 0.0006848598116159448
+            }
+          },
+          "solutions": {
+            "pick_approach": [
+              6.283185307179586,
+              -0.2979163088603922,
+              -2.7570858258261857,
+              4.263820059294609,
+              2.553249232016273,
+              2.965603616520224
+            ],
+            "pick_grasp": [
+              6.283185307179586,
+              0.8442601956717151,
+              -2.997429115237065,
+              4.294422526463084,
+              2.6294124107641865,
+              4.028543196559021
+            ],
+            "pick_lift": [
+              6.283185307179586,
+              -0.29791630886039294,
+              -2.757085825826185,
+              4.263820059294608,
+              2.553249232016272,
+              2.965603616520222
+            ],
+            "place_approach": [
+              4.162058532733698,
+              -1.903547076304001,
+              -2.4748362774134907,
+              5.112973155660146,
+              0.8878053015953731,
+              1.304159735857703
+            ],
+            "place": [
+              3.9816704631433297,
+              -2.1102108955365764,
+              -2.6189493715469863,
+              5.567973155660148,
+              0.761172908596832,
+              1.1305111736053306
+            ],
+            "place_retreat": [
+              4.1617075435249635,
+              -1.9033964799817087,
+              -2.474812057851876,
+              5.113665850624607,
+              0.8874850094708153,
+              1.303504523150244
+            ]
+          },
+          "joint_names": [
+            "right_shoulder_pan_joint",
+            "right_shoulder_lift_joint",
+            "right_elbow_joint",
+            "right_wrist_1_joint",
+            "right_wrist_2_joint",
+            "right_wrist_3_joint"
+          ],
+          "qpos_addresses": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "dof_addresses": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "target_rotation": [
+            [
+              -0.09951485465860248,
+              -0.9664478833628753,
+              0.23680220109977201
+            ],
+            [
+              -0.9929106706622819,
+              0.11199571055993325,
+              0.03981659077764929
+            ],
+            [
+              -0.06500149065411008,
+              -0.2311610900640402,
+              -0.9707416528887333
+            ]
+          ]
+        }
+      },
+      "execution": {
+        "executed": false
+      },
+      "recovery": {
+        "strategy": "CHANGE_OBJECT_POSITION",
+        "reason": "Target is too far beyond the table centre on the side away from the robot.",
+        "action": "Do not execute. Reposition or resample the cube within the approved workspace and validate again.",
+        "automatic_reposition_performed": false
+      },
+      "status": "workspace_rejected_recovery_recommended"
+    },
+    {
+      "trial": 9,
+      "cube_position_m": [
+        0.2723260626553339,
+        0.41989369015266487,
+        0.895
+      ],
+      "place_target_center_m": [
+        0.59,
+        0.0,
+        0.897
+      ],
+      "workspace": {
+        "allowed": false,
+        "reason": "Target is too far beyond the table centre on the side away from the robot.",
+        "far_side_projection_m": -0.3176739373446661,
+        "threshold_m": -0.08,
+        "table_center_xy_m": [
+          0.59,
+          0.0
+        ],
+        "robot_reference_xy_m": [
+          0.135,
+          0.0
+        ]
+      },
+      "workspace_rejected": true,
+      "ik_reachable": true,
+      "reachable": false,
+      "selected_arm": null,
+      "arms": {
+        "left": {
+          "arm": "left",
+          "reachable": false,
+          "joint_travel_cost_rad": 8.658505889801004,
+          "waypoint_errors": {
+            "pick_approach": {
+              "position_error_m": 0.007528814712938489,
+              "rotation_error_rad": 0.02622645972827434
+            },
+            "pick_grasp": {
+              "position_error_m": 0.025725527549489917,
+              "rotation_error_rad": 0.10533266903551014
+            },
+            "pick_lift": {
+              "position_error_m": 0.0074785148973248936,
+              "rotation_error_rad": 0.026586272698955644
+            },
+            "place_approach": {
+              "position_error_m": 0.053313623968648756,
+              "rotation_error_rad": 0.2910206618022532
+            },
+            "place": {
+              "position_error_m": 0.12618551831771851,
+              "rotation_error_rad": 0.7180018643189889
+            },
+            "place_retreat": {
+              "position_error_m": 0.05331362396864881,
+              "rotation_error_rad": 0.2910206618022535
+            }
+          },
+          "solutions": {
+            "pick_approach": [
+              0.8394126929388088,
+              -2.874927875958117,
+              2.4409627095231756,
+              6.093674186579564,
+              4.131001905407602,
+              -1.7750465989723765
+            ],
+            "pick_grasp": [
+              1.6760362107098952,
+              -2.9350815061394955,
+              2.5563870306943355,
+              6.1328487645127785,
+              4.766712698238348,
+              -1.3197437890753616
+            ],
+            "pick_lift": [
+              0.8801091196517247,
+              -2.8562077427692696,
+              2.4412039225194793,
+              6.088288815580783,
+              4.163843589707502,
+              -1.7475129098386577
+            ],
+            "place_approach": [
+              -0.30459548964105587,
+              -4.243368244792527,
+              2.001774036184064,
+              6.283185307179586,
+              3.702826923917919,
+              -3.424565945431712
+            ],
+            "place": [
+              -0.03924667333278303,
+              -4.285698808174122,
+              2.047384290102235,
+              6.283185307179586,
+              3.657490554385847,
+              -2.9252421975490392
+            ],
+            "place_retreat": [
+              -0.3045954896410558,
+              -4.243368244792527,
+              2.001774036184064,
+              6.283185307179586,
+              3.7028269239179186,
+              -3.424565945431712
+            ]
+          },
+          "joint_names": [
+            "left_shoulder_pan_joint",
+            "left_shoulder_lift_joint",
+            "left_elbow_joint",
+            "left_wrist_1_joint",
+            "left_wrist_2_joint",
+            "left_wrist_3_joint"
+          ],
+          "qpos_addresses": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "dof_addresses": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "target_rotation": [
+            [
+              -0.195755029213409,
+              -0.97826266045947,
+              0.06842613308099772
+            ],
+            [
+              -0.9805192040485078,
+              0.19640313942085744,
+              0.002810216666612325
+            ],
+            [
+              -0.016188237388285048,
+              -0.06654302349902841,
+              -0.9976522274790296
+            ]
+          ]
+        },
+        "right": {
+          "arm": "right",
+          "reachable": true,
+          "joint_travel_cost_rad": 5.76893264901608,
+          "waypoint_errors": {
+            "pick_approach": {
+              "position_error_m": 0.0012434641431297068,
+              "rotation_error_rad": 0.002048502831160518
+            },
+            "pick_grasp": {
+              "position_error_m": 0.0001915614807489904,
+              "rotation_error_rad": 0.0006971336381788444
+            },
+            "pick_lift": {
+              "position_error_m": 0.00010309020936624417,
+              "rotation_error_rad": 0.0006269543428032003
+            },
+            "place_approach": {
+              "position_error_m": 7.323430358484153e-05,
+              "rotation_error_rad": 0.00017260308700809516
+            },
+            "place": {
+              "position_error_m": 0.002843516275674505,
+              "rotation_error_rad": 0.014251522195760388
+            },
+            "place_retreat": {
+              "position_error_m": 0.007977504785371405,
+              "rotation_error_rad": 0.0351285053548844
+            }
+          },
+          "solutions": {
+            "pick_approach": [
+              4.907335681217287,
+              -2.7300920859313926,
+              -2.215599313561723,
+              5.496037892197522,
+              1.4974390893071408,
+              1.777508570560572
+            ],
+            "pick_grasp": [
+              4.977347998343039,
+              -2.994888725807054,
+              -2.3019748833502405,
+              5.842892881401128,
+              1.5573451544313508,
+              1.8140004884583896
+            ],
+            "pick_lift": [
+              4.90744078542462,
+              -2.7323855492245297,
+              -2.2152382808257447,
+              5.496539285875354,
+              1.497412036323952,
+              1.7775287920851586
+            ],
+            "place_approach": [
+              4.161745888825254,
+              -1.9038223657419224,
+              -2.4745327111076802,
+              5.112698869858262,
+              0.8875767483019653,
+              1.304234341405752
+            ],
+            "place": [
+              3.9816711064083825,
+              -2.110200926006499,
+              -2.6189451639888928,
+              5.567698869858264,
+              0.7611741631618569,
+              1.1305186826488682
+            ],
+            "place_retreat": [
+              4.161665234820756,
+              -1.9022872201556789,
+              -2.474979965611867,
+              5.147698869858262,
+              0.8873424170823208,
+              1.3029030445766825
+            ]
+          },
+          "joint_names": [
+            "right_shoulder_pan_joint",
+            "right_shoulder_lift_joint",
+            "right_elbow_joint",
+            "right_wrist_1_joint",
+            "right_wrist_2_joint",
+            "right_wrist_3_joint"
+          ],
+          "qpos_addresses": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "dof_addresses": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "target_rotation": [
+            [
+              -0.09951485465860248,
+              -0.9664478833628753,
+              0.23680220109977201
+            ],
+            [
+              -0.9929106706622819,
+              0.11199571055993325,
+              0.03981659077764929
+            ],
+            [
+              -0.06500149065411008,
+              -0.2311610900640402,
+              -0.9707416528887333
+            ]
+          ]
+        }
+      },
+      "execution": {
+        "executed": false
+      },
+      "recovery": {
+        "strategy": "CHANGE_OBJECT_POSITION",
+        "reason": "Target is too far beyond the table centre on the side away from the robot.",
+        "action": "Do not execute. Reposition or resample the cube within the approved workspace and validate again.",
+        "automatic_reposition_performed": false
+      },
+      "status": "workspace_rejected_recovery_recommended"
+    },
+    {
+      "trial": 10,
+      "cube_position_m": [
+        0.9169654570592953,
+        -0.4988817550517201,
+        0.895
+      ],
+      "place_target_center_m": [
+        0.59,
+        0.0,
+        0.897
+      ],
+      "workspace": {
+        "allowed": true,
+        "reason": "Target is within the approved workspace region.",
+        "far_side_projection_m": 0.32696545705929536,
+        "threshold_m": -0.08,
+        "table_center_xy_m": [
+          0.59,
+          0.0
+        ],
+        "robot_reference_xy_m": [
+          0.135,
+          0.0
+        ]
+      },
+      "workspace_rejected": false,
+      "ik_reachable": true,
+      "reachable": true,
+      "selected_arm": "left",
+      "arms": {
+        "left": {
+          "arm": "left",
+          "reachable": true,
+          "joint_travel_cost_rad": 4.625741106805544,
+          "waypoint_errors": {
+            "pick_approach": {
+              "position_error_m": 5.4457693960848405e-05,
+              "rotation_error_rad": 0.00011848098094441594
+            },
+            "pick_grasp": {
+              "position_error_m": 0.002215534353100701,
+              "rotation_error_rad": 0.011174916403648804
+            },
+            "pick_lift": {
+              "position_error_m": 0.007347407794921641,
+              "rotation_error_rad": 0.03327155037554447
+            },
+            "place_approach": {
+              "position_error_m": 0.00047179819069021476,
+              "rotation_error_rad": 0.00030609956378882443
+            },
+            "place": {
+              "position_error_m": 0.005930337596573289,
+              "rotation_error_rad": 0.02693897322471891
+            },
+            "place_retreat": {
+              "position_error_m": 7.326109050355017e-05,
+              "rotation_error_rad": 0.0005819610324354822
+            }
+          },
+          "solutions": {
+            "pick_approach": [
+              2.3191182729554645,
+              -0.18639014869985715,
+              1.2926640939241658,
+              4.475664769367261,
+              5.405540033939834,
+              -0.9177049626179384
+            ],
+            "pick_grasp": [
+              2.422808044910631,
+              -0.11095768139340582,
+              1.3767363028521329,
+              4.26566476936726,
+              5.482639770729989,
+              -0.8256380000299901
+            ],
+            "pick_lift": [
+              2.3190969653810134,
+              -0.187690042431473,
+              1.2946403915012383,
+              4.4406647693672605,
+              5.405766547005454,
+              -0.9161606404601723
+            ],
+            "place_approach": [
+              2.18328249534578,
+              -1.1945091834623363,
+              2.377550409377966,
+              4.461947228043406,
+              5.298804396861821,
+              -1.0228871010895644
+            ],
+            "place": [
+              2.3584346499998623,
+              -1.0395227530513442,
+              2.5150607428915315,
+              4.111947228043404,
+              5.435112837183132,
+              -0.8849487398985014
+            ],
+            "place_retreat": [
+              2.1831915618166073,
+              -1.1939847178173928,
+              2.377968662244493,
+              4.460039101118561,
+              5.298983471878938,
+              -1.022395820974774
+            ]
+          },
+          "joint_names": [
+            "left_shoulder_pan_joint",
+            "left_shoulder_lift_joint",
+            "left_elbow_joint",
+            "left_wrist_1_joint",
+            "left_wrist_2_joint",
+            "left_wrist_3_joint"
+          ],
+          "qpos_addresses": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "dof_addresses": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "target_rotation": [
+            [
+              -0.195755029213409,
+              -0.97826266045947,
+              0.06842613308099772
+            ],
+            [
+              -0.9805192040485078,
+              0.19640313942085744,
+              0.002810216666612325
+            ],
+            [
+              -0.016188237388285048,
+              -0.06654302349902841,
+              -0.9976522274790296
+            ]
+          ]
+        },
+        "right": {
+          "arm": "right",
+          "reachable": true,
+          "joint_travel_cost_rad": 5.477871807443502,
+          "waypoint_errors": {
+            "pick_approach": {
+              "position_error_m": 0.0025777394428303075,
+              "rotation_error_rad": 0.015416245562575214
+            },
+            "pick_grasp": {
+              "position_error_m": 0.003223091160517963,
+              "rotation_error_rad": 0.01903763293151713
+            },
+            "pick_lift": {
+              "position_error_m": 0.002043347084041163,
+              "rotation_error_rad": 0.012493632868169466
+            },
+            "place_approach": {
+              "position_error_m": 0.00010928599657307779,
+              "rotation_error_rad": 0.031064115634179854
+            },
+            "place": {
+              "position_error_m": 0.002588341888921581,
+              "rotation_error_rad": 0.013041264460370712
+            },
+            "place_retreat": {
+              "position_error_m": 0.00010329613215414507,
+              "rotation_error_rad": 0.0009776894166991627
+            }
+          },
+          "solutions": {
+            "pick_approach": [
+              3.4636112460120465,
+              -1.6599909983849719,
+              -1.8774592576794162,
+              5.023000000000004,
+              0.5479893963332504,
+              0.33332269085808175
+            ],
+            "pick_grasp": [
+              3.2832499496064074,
+              -1.7574301367080896,
+              -1.982116911361373,
+              5.513000000000006,
+              0.562290561929043,
+              -0.008767459656860644
+            ],
+            "pick_lift": [
+              3.4632565399243793,
+              -1.6592286562134162,
+              -1.8801379625674666,
+              5.058000000000004,
+              0.547944898630619,
+              0.3270829742518769
+            ],
+            "place_approach": [
+              4.161382062390873,
+              -1.9034898524349981,
+              -2.474731639484255,
+              5.1140034864216615,
+              0.8876498629501095,
+              1.2720829742518769
+            ],
+            "place": [
+              3.981668042162997,
+              -2.1102479897347473,
+              -2.6189651760236594,
+              5.569003486421663,
+              0.7611681862524191,
+              1.130482935444079
+            ],
+            "place_retreat": [
+              4.161706334106416,
+              -1.903373730443942,
+              -2.474819043913034,
+              5.1140034864216615,
+              0.8874810282043007,
+              1.3034871668554242
+            ]
+          },
+          "joint_names": [
+            "right_shoulder_pan_joint",
+            "right_shoulder_lift_joint",
+            "right_elbow_joint",
+            "right_wrist_1_joint",
+            "right_wrist_2_joint",
+            "right_wrist_3_joint"
+          ],
+          "qpos_addresses": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "dof_addresses": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "target_rotation": [
+            [
+              -0.09951485465860248,
+              -0.9664478833628753,
+              0.23680220109977201
+            ],
+            [
+              -0.9929106706622819,
+              0.11199571055993325,
+              0.03981659077764929
+            ],
+            [
+              -0.06500149065411008,
+              -0.2311610900640402,
+              -0.9707416528887333
+            ]
+          ]
+        }
+      },
+      "execution": {
+        "executed": true,
+        "execution_mode": "kinematic_attachment_surrogate",
+        "final_cube_center_m": [
+          0.5876770481394136,
+          0.0025907333379542544,
+          0.8956680225642284
+        ],
+        "place_target_center_m": [
+          0.59,
+          0.0,
+          0.897
+        ],
+        "final_place_error_m": 0.0037258782138435698,
+        "placement_within_2cm": true,
+        "arm": "left"
+      },
+      "recovery": null,
+      "status": "executed_success"
+    }
+  ],
+  "summary": {
+    "completed_trials": 10,
+    "reachable_trials": 7,
+    "ik_reachable_trials": 10,
+    "executed_trials": 7,
+    "unreachable_trials": 0,
+    "workspace_rejected_trials": 3,
+    "placement_successes": 7
+  }
+}
